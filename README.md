@@ -75,13 +75,7 @@
 <a href="#" target="blank">
 <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&style=flat-square" />
 </a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-Instagram-E4405F?logo=Instagram&logoColor=white&style=flat-square" />
-</a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-WhatsApp-25D366?logo=WhatsApp&logoColor=white&style=flat-square" />
-</a>
-</p>
+
 
 <!--Tomas Augusto Cevasco,-->
 
@@ -99,12 +93,7 @@
 <a href="#" target="blank">
 <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&style=flat-square" />
 </a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-Instagram-E4405F?logo=Instagram&logoColor=white&style=flat-square" />
-</a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-WhatsApp-25D366?logo=WhatsApp&logoColor=white&style=flat-square" />
-</a>
+
 
 <!--German Alexis Conde,-->   
     
@@ -121,12 +110,6 @@
 </a>
 <a href="#" target="blank">
 <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&style=flat-square" />
-</a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-Instagram-E4405F?logo=Instagram&logoColor=white&style=flat-square" />
-</a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-WhatsApp-25D366?logo=WhatsApp&logoColor=white&style=flat-square" />
 </a>
 
 <!--Verónica Startschewoi,-->   
@@ -145,10 +128,5 @@
 <a href="#" target="blank">
 <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&style=flat-square" />
 </a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-Instagram-E4405F?logo=Instagram&logoColor=white&style=flat-square" />
-</a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-WhatsApp-25D366?logo=WhatsApp&logoColor=white&style=flat-square" />
-</a>
+
     
