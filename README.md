@@ -11,7 +11,6 @@
       src="https://i.imgur.com/WtDqLeQ.gif"
     />
 </p>
-<img src="https://img.icons8.com/ios-glyphs/30/000000/loading-bar--v2.png"/>
 <div align="center">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="35" height="35"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width="44" height="44"/>
