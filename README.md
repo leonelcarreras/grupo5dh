@@ -152,7 +152,7 @@ Pantalla resistente a impactos.
 <p align="center">
 <img src="https://i.imgur.com/WfAdBpd.png" width="240" height="30"/>
 <h4 align="center">26 años. Saenz Peña, provincia de Bs As.</h4>   
-<h4 align="center">Tecnico eletrico, estudiante de ingenieria electrica.</h4>  
+<h4 align="center">Técnico eletrico, estudiante de ingenieria electrica.</h4>  
 <h4 align="center">Trabajando actualmente en Trenes Argentinos (SOFSE).</h4>  
 
     
