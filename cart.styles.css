@@ -1,0 +1,113 @@
+.container {
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+flex-direction: row;
+background-color: #f2f2f2;
+padding: 5px 20px 15px 20px;
+border: 1px solid lightgrey;
+border-radius: 3px;
+}
+
+.item1 {
+    width: 60px;
+    height: 20px;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif; 
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    display: flex;
+}
+
+.item2 {
+    width: 20px;
+    height: 20px;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif; 
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  
+}
+
+.item3 {
+    width: 20px;
+    height: 20px;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif; 
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    display: flex;
+}
+
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 30%;
+    border-radius: 3px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 17px;
+    justify-items: right;
+    display: flex;
+    flex-direction: row;
+   
+  }
+  
+  .btn:hover {
+    background-color: #e0e0e0;
+    color: black;
+    font-weight: bold;
+  }
+
+  footer{
+    position: fixed;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: 1px;
+    width: 100%;
+    background: #e0e0e0;
+    display: flex;
+  }
+  footer .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+    display: flex;
+    
+  }
+
+  
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
