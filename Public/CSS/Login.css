@@ -1,0 +1,80 @@
+* { margin: 0px ;
+    padding : 0px;
+    box-sizing: border-box;
+    max-width: 361px;
+    }
+    
+  
+    body {  font-family: 'Roboto', sans-serif;
+        background-color: white ;
+    
+    }
+    
+    
+    main  {
+        text-align: center;
+      }
+    
+ 
+    section.formularioLogin{ background-color: #ffffff;
+        border: #666666;
+
+        width: 100vw;
+      font-size: 10px;
+      margin: auto;
+   
+    } 
+    
+    .formularioLogin div {
+      margin: 35px;
+      text-align: center
+      ;align-items: center
+      } 
+ 
+
+    
+    
+        .fotoperfil {
+          font-size: 70%;
+        }
+        
+        
+        .burbuja{
+    
+          width: 75vw;
+          height: 40px;
+          border-radius: 4px;
+          font-size: 15px;
+          border: solid 2px
+          ; background-color: #e0e0e0;
+          
+        }
+    
+     
+    
+           
+        .seccion-boton  {
+        
+        
+            text-align: center
+            ;align-items: center
+            }
+
+        .boton {
+    
+        font-size: 20px;
+        border-radius: 8px;
+        padding:  5px;
+        margin: 5px;
+        background-color: #000000;
+        color: #fff;
+        width: 45vw;
+        }
+
+        
+        .registrarme {font-size: 15px;
+        }
+
+
+        .iconoUsuario {font-size: 50px;}
+

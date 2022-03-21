@@ -1,0 +1,88 @@
+* { margin: 0px ;
+  padding : 0px;
+  box-sizing: border-box;
+  max-width: 361px;
+  }
+  
+  body {  font-family: 'Roboto', sans-serif;
+      background-color: white ;
+  
+  }
+  
+
+  main  { 
+    text-align: center;
+  }
+
+  main section article {
+  
+    background-color: #fff;
+    padding:  15px;
+    margin: 10px; 
+    
+  }
+  
+  main section article div {
+    border-top: solid 0.5px rgb(185, 181, 181);
+    margin-top: 10px;
+  padding: 10px;}
+  
+
+  section.header-formulario{ background-color: #ffffff;
+   
+
+    width: 100vw;
+  padding-top: 10px;
+  font-size: 10px;
+  margin: auto;
+
+} 
+  
+
+
+   section.formulario{ background-color: #ffffff;
+   
+
+    width: 100vw;
+    padding: 0px 10px 0px 10px;
+  font-size: 10px;
+  margin: auto;
+
+} 
+  
+  
+  
+  
+  .formulario div {
+    margin: 35px;
+  
+    } 
+  
+
+    .burbuja{
+    
+      width: 75vw;
+      height: 40px;
+      border-radius: 4px;
+      font-size: 15px;
+      border: solid 2px
+      ; background-color: #e0e0e0;
+      
+    }
+  
+    .boton {
+    
+      font-size: 20px;
+      border-radius: 8px;
+      padding:  5px;
+      margin: 10px;
+      background-color: #000000;
+      color: #fff;
+      width: 45vw;
+      flex-wrap: flex ;
+      }
+
+    h3 {text-align: left;}
+
+
+    .iconoRegistro {font-size: 35px;}
