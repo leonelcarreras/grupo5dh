@@ -15,13 +15,18 @@ app.listen(3004, () => {
 
 
 
+    app.get("/",(req,res) =>{
+
+        res.sendFile(path.resolve(__dirname, "./Views/home.html"))
         
+        }) ;
+  
     app.get("/Login",(req,res) =>{
 
         res.sendFile(path.resolve(__dirname, "./Views/Login.html"))
         
         }) ;
-
+    
 
         app.get("/Registro",(req,res) =>{
 
