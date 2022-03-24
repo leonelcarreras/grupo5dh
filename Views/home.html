@@ -1,14 +1,153 @@
-<!DOCTYPE html >
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="title" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="HTML5, CSS, Javascript">
-    <title></title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/stylehome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llamaquellama - Home</title>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+
+            <input type="checkbox" id="burger-checkbox">
+            <label for="burger-checkbox">
+                <span></span>
+                <span></span>
+
+            </label>
+            <div class="menu-wrapper">
+                <nav>
+                    <div class="profile">
+                        <a href="#">
+                            <img src="/images/Blank-profile.png"
+                        </a>
+                        <p>Profile Name</p>
+                    </div>
+                <ul>
+                    <li><a href="#">Mis Datos</a></li>
+                    <li><a href="#">Mis Compras</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Salir</a></li>
+                </ul>
+                </nav>
+            </div>
+
+
+            <div class="bar-img">
+                <img src="/images/nav-icon.png"></img>
+                
+            </div>
+
+
+            <div class="bar-bag-icon">
+                <span class="material-icons-outlined">
+                    shopping_bag
+                    </span>
+            </div>
+
+        </div>
+        
+        
+
+    </header>
+
+        
+
+    <main>
+        <div class="slider">
+            
+            <ul>
+                <li>
+                    <img src="/images/Samsung-S22.gif">
+                </li>
+                <li>
+                    <img src="/images/apple-apple-iphone.gif">
+                </li>
+                <li>
+                    <img src="/images/oneplus.gif">
+                </li>
+                <li>
+                    <img src="/images/xiaomi-12.gif">
+                </li>
+            </ul>
+
+        </div>
+
+        <section class="filter-mobile">
+            <p>COMPRÁ POR MARCA</p>
+            <div class="brand-flex">
+                <article class="brand">
+                    <img src="/images/marcas/Apple.png"></img>
+                    <p>Apple</p>
+                </article>
+                <article class="brand">
+                    <img src="/images/marcas/Huawei-logo.png"></img>
+                    <p>Huawei</p>
+                </article>
+                <article class="brand">
+                    <img src="/images/marcas/Samsung-logo.png"></img>
+                    <p>Samsung</p>
+                </article>
+                <article class="brand">
+                    <img src="/images/marcas/LG-logo.png"></img>
+                    <p>LG</p>
+                </article>
+                <article class="brand">
+                    <img src="/images/marcas/Motorola-logo.png"></img>
+                    <p>Motorola</p>
+                </article>
+                <article class="brand">
+                    <img src="/images/marcas/Xiaomi-logo.png"></img>
+                    <p>Xiaomi</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="filter-select" align="center">
+            <p>ORDENAR POR:</p>
+            <div class="filter-flex">
+                <select id="filter">
+                    <option>Precio</option>
+                    <option value="Mayor">Mayor A Menor</option>
+                    <option value="Menor">Menor A Mayor</option>
+                </select>
+                <select id="filter">
+                    <option>Marca</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Motorola">Motorola</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                    <option value="LG">LG</option>
+                    <option value="Huawei">Huawei</option>
+                </select>
+                <select id="filter">
+                    <option>Fecha</option>
+                    <option value="Mayor">Mayor A Menor</option>
+                    <option value="Menor">Menor A Mayor</option>
+                </select>
+            </div>    
+        </section>    
+        <section class="products">
+
+            <article class="product-phone">
+                <img src="images/products/apple-iphone-11.jpg">
+                <p>Iphone 11</p>
+            </article>
+
+            <article class="product-phone">
+                <img src="images/products/Samsung-Galaxy-Z-Flip.jpg">
+                <p>Samsung Galaxy Z-Flip</p>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     
-    
-  </body>
+    </footer>
+</body>
 </html>
