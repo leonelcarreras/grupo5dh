@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ebebeb;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 15px;
+}
+
+div.top-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+
+header {
+  background-color: #616262;
+}
+
+header div.logo,
+header .form {
+  width: 50%;
+}
+
+header div.logo {
+  padding: 10px;
+}
+.products {
+  overflow: hidden;
+  background: #fffefe;
+}
+.main-article {
+  float: left;
+  margin-left: 5px;
+  text-align: center;
+  width: 33%;
+  padding: 100px;
+}
+.main-article2 {
+  float: left;
+  margin-left: 5px;
+  text-align: center;
+  width: 33%;
+
+  padding: 100px;
+}
+.main-article3 {
+  float: left;
+  margin-left: 5px;
+  text-align: center;
+  width: 33%;
+
+  padding: 100px;
+}
+.modelo {
+  font-weight: bold;
+  font-size: 20px;
+}
+.Procesador {
+  text-decoration: underline;
+  color: #000000;
+  font-size: 20px;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.discount,
+.description {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h3,
+.description {
+  color: rgb(15, 15, 15);
+}
+.description {
+  display: none;
+}
+
+section.banner img {
+  width: 100%;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section article {
+  background-color: #fff;
+  margin: 10px 0px;
+}
+main section article img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  color: #000000;
+  padding: 200px;
+}
+
+/*dispositivos desde 316px*/
+@media (min-width: 361px) {
+  .description {
+    display: block;
+  }
+  article {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  }
+  header nav {
+    display: inline-block;
+  }
+  .main-article {
+    display: block;
+  }
+}

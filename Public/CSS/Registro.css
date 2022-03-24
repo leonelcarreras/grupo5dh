@@ -52,7 +52,6 @@
   
   
   
-  
   .formulario div {
     margin: 35px;
   
@@ -67,9 +66,19 @@
       font-size: 15px;
       border: solid 2px
       ; background-color: #e0e0e0;
+
       
     }
-  
+.boton:hover{  background-color: #131313
+  ; zoom: 105%;
+}
+   
+    .burbuja:hover{
+
+      background-color: #dddddd
+      ; zoom: 105%;
+
+    }
     .boton {
     
       font-size: 20px;

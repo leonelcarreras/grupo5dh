@@ -7,10 +7,10 @@
   
     body {  font-family: 'Roboto', sans-serif;
         background-color: white ;
-    
+  
     }
     
-    
+    div {al}
     main  {
         text-align: center;
       }
@@ -50,7 +50,16 @@
           
         }
     
-     
+        .boton:hover{  background-color: #131313
+          ; zoom: 105%;
+        }
+           
+            .burbuja:hover{
+        
+              background-color: #dddddd
+              ; zoom: 105%;
+        
+            }
     
            
         .seccion-boton  {

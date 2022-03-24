@@ -28,3 +28,16 @@ app.listen(3004, () => {
             res.sendFile(path.resolve(__dirname, "./Views/Registro.html"))
             
             }) ;
+
+            app.get("/productDetail",(req,res) =>{
+
+                res.sendFile(path.resolve(__dirname, "./Views/productDetail.html"))
+                
+                }) ;
+
+
+            app.get("/carrito",(req,res) =>{
+
+                res.sendFile(path.resolve(__dirname, "./Views/carrito.html"))
+                
+                }) ;
