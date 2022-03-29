@@ -1,17 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 
+
 ;
 }
 
-.topbanner { margin: auto;
+
+
+
+/* Seccion Header */
+
+header {
+  background-color: #1b1b1b;
+  opacity: 0.9;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+}
+body {
+  background-color: #ffffff;
+
+  max-width: 380px;
+}
+
+header .header-bar {
+  display: flex;
+  width: 100vw;
+  height: 56px;
+  padding: 8px 16px;
+  ;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#burger-checkbox {
+  display: none;
+}
+
+header label {
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  background-color: transparent;
+}
+
+header label:hover {
+  background-color: transparent;
+}
+
+header label span {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 20px;
+  height: 2px;
+  background-color: #d6d6d6;
+  transition: all 0.3s linear;
+  opacity: 1;
+}
+
+header label span:first-child {
+  transform: translate(-50%) rotate(0deg);
+}
+
+header label span:last-child {
+  transform: translate(-50%, 7px) rotate(0deg);
+}
+
+#burger-checkbox:checked ~ label span:first-child {
+  transform: translate(-13px) rotate(45deg);
+}
+
+#burger-checkbox:checked ~ label span:last-child {
+  transform: translate(-13px) rotate(-45deg);
+}
+
+.menu-wrapper {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: -100%;
   width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease-in-out;
 }
-header{
-  margin: 5px;
+
+#burger-checkbox:checked ~ .menu-wrapper {
+  left: 0;
 }
+
+nav a {
+  display: block;
+  padding: 1rem 0;
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+header .bar-img {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+  text-align: center;
+  background-color: transparent;
+}
+header .bar-img img {
+  padding: 4px 0px 0px 0px;
+  background-color: transparent;
+}
+
+header .bar-bag-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  background-color: transparent;
+}
+header .bar-bag-icon span {
+  color: #d6d6d6;
+  padding: 6px 0px 0px 0px;
+  position: relative;
+  background-color: transparent;
+}
+
+.profile {
+  margin-top: 50px;
+  margin-bottom: -100px;
+  border-bottom: 1px solid white;
+}
+.profile img {
+  border-radius: 50%;
+  background-color: white;
+  width: 120px;
+  height: 120px;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+/* Seccion Header FIN */
+
+
+
+
+
+
+main  { 
+  padding-top: 80px;
+  position: relative;
+  padding-bottom: 120px;
+} 
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  position: relative;
+  
+}
+
+
+
+
+ .main-article {
+  width: 100%
+  ;display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-bottom: 1px solid gainsboro;
+  position: relative;
+  padding: 15px;
+}
+
+
+.detalle-main-article {
+  width: 50%
+;display: flex;
+  align-items: baseline;
+
+  padding-left: 30px;
+}
+
+.main-article div {display: flex;
+flex-wrap:wrap;}
+
+
+main section article {
+
+  background-color: #fff; 
+  margin: 10px; 
+  box-shadow : none;
+  transition-property: box-shadow;
+  transition-duration: 00.5s;
+}
+
+
+main section article div {
+ 
+  margin-top: 10px;
+padding: 10px;}
+
+
+ article img {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.Precio { font-size: 23px; 
+  font-style:inherit;
+  margin-right: 30px;
+  display: flex
+  ;flex-wrap: wrap
+ ;width: 100%;  
+}
+
+
+
+main section article {display: flex;}
+
+.descripciones{ 
+    display: block;
+     font-size: 20px;
+    color: rgb(0, 0, 0);
+    transition-duration: 1s;
+}
+
+
+
+
+/* Nuevo Carrito */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 section .container {
@@ -76,37 +371,62 @@ align-items: baseline;
   margin-left: 220px;
   margin-top: 160px;
   
-
- 
 }
 
 
 .btn {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 5px;
+    ;
+    border: none;
+    width: 20vw;
+    border-radius: 3px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 11px;
+    justify-items: right;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+   
+  }
+
+  .selectorCantidad {
+    
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 15px;
+    margin-bottom: 90px;
+
+
+  }
+
+  .boton {
+    background-color: black;
+    color: white;
+    padding: 8px;
     margin: 10px ;
     border: none;
     width: 30vw;
     border-radius: 3px;
     cursor: pointer;
     justify-content: center;
-    font-size: 15px;
+    font-size: 12px;
     justify-items: right;
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
+    margin-left: 220px;
+    max-width: 150px;
    
   }
   
-  .btn:hover {
-    background-color: #e0e0e0;
-    color: black;
-    font-weight: bold;
-  }
-
+  
   footer{
     position: fixed;
-    background-color: black;
+    background-color:#000000;
+    opacity: 0.9;
     color: white;
     font-weight: bold;
     width: 100%;
@@ -118,7 +438,7 @@ align-items: baseline;
     content: '';
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 80px;
     height: 1px;
     width: 100%;
     background: #e0e0e0;
@@ -127,17 +447,23 @@ align-items: baseline;
   footer .content{
     max-width: 1250px;
     margin: auto;
-    padding: 30px 40px 40px 40px;
+    padding: 20px 30px 15px 40px;
     display: flex;
     
   }
 
   
-  @media (max-width: 800px) {
-    .row {
-      flex-direction: column-reverse;
-    }
-    .col-25 {
-      margin-bottom: 20px;
-    }
+  .boton:hover {
+    background-color: #2f307a;
+    zoom: 100%;
+  }
+
+  .btn:hover {
+    background-color: #2f307a;
+    zoom: 100%;
+  }
+
+
+  @media (min-width:361px) {
+body main{margin: auto;}
   }

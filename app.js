@@ -21,14 +21,14 @@ app.listen(3004, () => {
         
         }) ;
   
-    app.get("/Login",(req,res) =>{
+    app.get("/login",(req,res) =>{
 
         res.sendFile(path.resolve(__dirname, "./Views/Login.html"))
         
         }) ;
     
 
-        app.get("/Registro",(req,res) =>{
+        app.get("/registro",(req,res) =>{
 
             res.sendFile(path.resolve(__dirname, "./Views/Registro.html"))
             
@@ -41,8 +41,15 @@ app.listen(3004, () => {
                 }) ;
 
 
-            app.get("/carrito",(req,res) =>{
+                app.get("/cart",(req,res) =>{
 
-                res.sendFile(path.resolve(__dirname, "./Views/carrito.html"))
-                
-                }) ;
+                    res.sendFile(path.resolve(__dirname, "./Views/cart.html"))
+                    
+                    }) ;
+
+
+
+                        
+                    
+        
+    
