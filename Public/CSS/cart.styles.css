@@ -11,8 +11,6 @@ box-sizing: border-box;
 }
 
 
-
-
 /* Seccion Header */
 
 header {
@@ -24,7 +22,7 @@ header {
   position: fixed;
   z-index: 10;
 }
-body {
+body .mainCart{
   background-color: #ffffff;
 
   max-width: 380px;
@@ -197,13 +195,13 @@ header .bar-bag-icon span {
 
 
 
-main  { 
+main .mainCart  { 
   padding-top: 80px;
   position: relative;
   padding-bottom: 120px;
 } 
 
-article {
+.mainCart article.main-article{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -215,7 +213,7 @@ article {
 
 
 
- .main-article {
+.mainCart .main-article {
   width: 100%
   ;display: flex;
   flex-wrap: wrap;
@@ -226,7 +224,7 @@ article {
 }
 
 
-.detalle-main-article {
+.mainCart .detalle-main-article {
   width: 50%
 ;display: flex;
   align-items: baseline;
@@ -234,11 +232,11 @@ article {
   padding-left: 30px;
 }
 
-.main-article div {display: flex;
+.mainCart .main-article div {display: flex;
 flex-wrap:wrap;}
 
 
-main section article {
+.mainCart section article {
 
   background-color: #fff; 
   margin: 10px; 
@@ -248,20 +246,20 @@ main section article {
 }
 
 
-main section article div {
+.mainCart section article div {
  
   margin-top: 10px;
 padding: 10px;}
 
 
- article img {
+.mainCart article img {
   width: 40%;
   display: flex;
   flex-wrap: wrap;
 }
 
 
-.Precio { font-size: 23px; 
+.mainCart .Precio { font-size: 23px; 
   font-style:inherit;
   margin-right: 30px;
   display: flex
@@ -271,7 +269,7 @@ padding: 10px;}
 
 
 
-main section article {display: flex;}
+.mainCart main section article {display: flex;}
 
 .descripciones{ 
     display: block;
@@ -309,12 +307,12 @@ main section article {display: flex;}
 
 
 
-section .container {
+.mainCart section .container {
 
   margin: 10px;
 }
 
-.container {
+.mainCart .container {
 width: 90%;
 height: auto;
 display: flex;
@@ -328,7 +326,7 @@ border-radius: 3px;
 align-items: baseline;
 }
 
-.item1 {
+.mainCart .item1 {
   
     height: 20px;
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif; 
@@ -341,7 +339,7 @@ align-items: baseline;
     display: flex;
 }
 
-.item2 {
+.mainCart .item2 {
     
     height: 20px;
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif; 
@@ -354,7 +352,7 @@ align-items: baseline;
   
 }
 
-.item3 {
+.mainCart .item3 {
 
     height: 20px;
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif; 
@@ -367,14 +365,14 @@ align-items: baseline;
     display: flex;
 }
 
-.seccion-botones{
+.mainCart .seccion-botones{
   margin-left: 220px;
   margin-top: 160px;
   
 }
 
 
-.btn {
+.mainCart .btn {
     background-color: black;
     color: white;
     padding: 5px;
@@ -392,7 +390,7 @@ align-items: baseline;
    
   }
 
-  .selectorCantidad {
+  .mainCart .selectorCantidad {
     
     border-radius: 5px;
     font-size: 15px;
@@ -402,7 +400,7 @@ align-items: baseline;
 
   }
 
-  .boton {
+  .mainCart .boton {
     background-color: black;
     color: white;
     padding: 8px;
@@ -423,7 +421,7 @@ align-items: baseline;
   }
   
   
-  footer{
+  .mainCart footer{
     position: fixed;
     background-color:#000000;
     opacity: 0.9;
@@ -434,7 +432,7 @@ align-items: baseline;
     left: 0;
   }
 
-  footer::before{
+  .mainCart footer::before{
     content: '';
     position: absolute;
     left: 0;
@@ -444,7 +442,7 @@ align-items: baseline;
     background: #e0e0e0;
     display: flex;
   }
-  footer .content{
+  .mainCart footer .content{
     max-width: 1250px;
     margin: auto;
     padding: 20px 30px 15px 40px;

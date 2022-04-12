@@ -147,7 +147,7 @@ header .bar-bag-icon span{
 
 }
 
-body{
+.home body{
     height: 800px;
 }
 
@@ -195,7 +195,6 @@ body{
     
 }
 .filter-mobile P{
-    padding-top: 10px;
     color:rgb(0, 0, 0);
     background-color:transparent  
 }
@@ -262,7 +261,7 @@ body{
     width: 120px;
     height: 120px;
 }
-.products{
+.home  .products{
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -270,7 +269,7 @@ body{
     margin-top: 30px;
 
 }
-.products .product-phone{
+.home .products .product-phone{
     width:40%;
     height:176px;
     background-color:rgb(255, 255, 255);
@@ -279,12 +278,12 @@ body{
     font-family: 'Roboto';
     
 }
-.products .product-phone img{
+.home .products .product-phone img{
     width:120px;
     padding-left:17px;
     padding-top:17px;
 }
-.products .product-phone p{
+.home .products .product-phone p{
 
     padding-top: 10px;
     text-align: center;

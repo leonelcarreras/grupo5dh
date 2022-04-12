@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include("./partials/head") %>
+
+<body>
+<!-- Header -->
+
+
+<%- include("./partials/header") %>
+
+  
+
+
+
+    
+    <main>
+
+
+        <form action="/login/create" method="POST">
+  
+        <section class="header-formulario">
+    <div>
+        <div class="titulo">Login de Usuario</div> <label for="Nombre Usuari@"></label> </div>
+   
+        <div class="iconoUsuario"><i class="fas fa-user-circle"></i></div>
+    </section>
+    
+     
+            <section class="formularioLogin">
+                
+    <div>
+    <input type="email" name="nombreUsuario" placeholder="Ingrese su e-mail" class="burbuja" required>
+    
+    </div>
+
+   
+                <div><label for="Contraseña"></label> 
+    
+                    <input type="password" name="password" placeholder="Contraseña" class="burbuja" required  >
+                   
+                    <p class="rememberUser"><input type="checkbox" name="recordarUsuario" id="rememberUser" class="rememberUserTag"> <label for="rememberUser" >Recordar Ususario y Contraseña</label> </p>
+                </div>
+
+
+            </section>
+            <section class="seccion-boton">
+                <div  >
+                    <button type="submit" class="boton">Ingresar</button>
+            
+                </div>  
+                <div class="forgotPassword">
+                    <a href="./";> ¿Olvidaste tu contraseña? </a> 
+                 </div>
+                </section>
+          
+                   
+            
+       
+                </section>
+                      
+                </form>
+                </section>
+</div>
+</main>
+
+</body>
+</html>

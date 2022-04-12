@@ -1,115 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/stylehome.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/868ff58ad9.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llamaquellama - Home</title>
-</head>
+
+<!-- Head -->
+    <%- include("./partials/head") %>
 <body>
-    <header>
-        <div class="header-bar">
+  
+<!-- Heder -->
 
-            <input type="checkbox" id="burger-checkbox" class="oculto">
-            <label for="burger-checkbox">
-                <span></span>
-                <span></span>
+    <%- include("./partials/header") %>
 
-            </label>
-            <div class="menu-wrapper">
-                <nav>
-                    <div class="profile">
-                        <a href="#">
-                            <img src="/images/Blank-profile.png"
-                        </a>
-                        <p>Profile Name</p>
-                    </div>
-                <ul>
-                    <li><a href="/login.html">Login</a></li>
-                    <li><a href="/registro.html">Registrarse</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Salir</a></li>
-                </ul>
-                </nav>
-            </div>
-
-            <div class="nav-768">
-                <div class="bar-img">
-                    <img src="/images/nav-icon.png"></img>
-                    
-                </div>
-            </div>
-
-            <div class="bar-bag-icon">
-                <span class="material-icons-outlined">
-                    shopping_bag
-                    </span>
-            </div>
-
-            
-        </div>
-
-        <!--Navbar x768-->
-            <div class="navbar-768" >
-
-                <img src="/images/nav-icon.png"></img>
-                <div class="logotext">
-                  LlamaQueLlama  
-                </div>
-                <span></span>
-                <div class="nav">
-                    <a href="#">
-                        Samsung
-                    </a>
-                    <a href="#">
-                        Apple
-                    </a>
-                    <a href="#">
-                        LG
-                    </a>
-                    <a href="#">
-                        Motorola
-                    </a>
-                    <a href="#">
-                        Xiaomi
-                    </a>
-                    <a href="#">
-                        Huawei
-                    </a>
-
-                </div>
-                <div class="navprofile">
-                    <span class="material-icons-outlined">
-                        search
-                        </span>
-                    <span class="material-icons-outlined">
-                        shopping_bag
-                        </span>
-                    <div class="user-img">
-
-                    </div>
-                </div>
-
-            </div>
-        
-        
-
-    </header>
-
-        
-
-    <main>
-
-        
-
-    
-
-
-
+    <main class="home">
 
 
         <div class="phone-graphic"><div class="phone-case">
@@ -203,8 +103,8 @@
                     <p>Huawei</p>
                 </article>
                 <article class="brand">
-                    <img src="/images/marcas/Samsung-logo.png"></img>
-                    <p>Samsung</p>
+                    <a href="./productDetail">  <img src="/images/marcas/Samsung-logo.png"></a></img>
+                    <p>Samsung</p></a>
                 </article>
                 <article class="brand">
                     <img src="/images/marcas/LG-logo.png"></img>

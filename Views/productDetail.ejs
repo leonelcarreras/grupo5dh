@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include("./partials/head") %>
+
+    <body class="productDetail">
+        <!-- Heder -->
+
+    <%- include("./partials/header") %>
+
+    <section class="banner">
+        
+    </section>
+    <main class="main">
+            <section class="last-visit">
+              
+              <div class="container">
+                
+                     <div class="products">
+                        <div class="img-container">
+                        <img id="imageBox" src="/images/ultragif.gif" alt="S22" class ="product_img1"/>
+                        </div>
+                        <div class = "product-small-img">
+                            <img src="/images/ultra black.webp" onclick="myFuction(this)">
+                            <img src="/images/ultra2.webp" onclick="myFuction(this)">
+                            <img src="/images/ultra1.webp" onclick="myFuction(this)">
+                      </div>
+                      <script type="text/javascript">
+                          function myFuction(smallImg){
+                              var fullImg=document.getElementById("imageBox");
+                              fullImg.src=smallImg.src;
+                          }
+                      </script>
+                    
+                        <div class="especificacion">
+                        <p class="modelo"> Especificacion Tecnica</p>
+                        <p class="modelo"> Galaxy S22 Ultra </p>
+                         <p class="Procesador"><i class="fas fa-microchip"></i></p>
+                         <p class="tipo">CPU Speed 2.99GHz, 2.4GHz, 1.7GHz</p>
+                         <p class="Procesador"><i class="fas fa-mobile"></i></p>
+                         <p class="amoled">Dynamic AMOLED 2X</p>
+                         <p class="resolucion">3088 x 1440 (Quad HD+)</p>
+                         <p class="Procesador"><i class="fas fa-camera-retro"></i></p>
+                         <p class="camara"> Resolution (Multiple):
+                            108.0 MP + 10.0 MP + 12.0 MP + 10.0 MP</p>
+                        <p class="camara"> Video Recording Resolution
+                            UHD 8K (7680 x 4320)@24fps</p>
+                        <p class="Procesador"><i class="fas fa-sd-card"></i></p>
+                        <p class="memoria">256GB - 12GB RAM</p>
+                        <p class="Procesador"><i class="fas fa-battery-full"></i></p>
+                        <p class="memoria">20Hs de uso - 5000mAh - no removible</p>
+                        <div class="precio">
+                            <p class="Procesador">PRECIO</p>
+                        <p class="precio2">200.000$</p>
+                        <center> <input class="com" type="submit" value="Comprar"></center>
+                         </div>
+                        </div>
+                    </div>
+    
+            </section>
+            <!-- <footer >
+                     
+                         <div class="container-footer">
+                             <div class="copyright">
+                             Copyright © 1999-2022
+                             </div>
+                             <div class="information">
+                               <a>Seguinos:</a><a href="http://twitter.com" TARGET="_blank"><i class="fab fa-twitter"></i></a> | <a href="http://facebook.com" TARGET="_blank"><i class="fab fa-facebook"></i></a> | <a href="http://instagram.com" TARGET="_blank"><i class="fab fa-instagram"></i></a>
+                             </div>
+                         </div>        
+                 </div> 
+             </footer> -->
+</body>
+</html>

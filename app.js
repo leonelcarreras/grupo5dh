@@ -1,11 +1,15 @@
 const express = require("express");
-const { link } = require("fs");
+
+
 
 const app = express()
 
 app.use(express.static("public"));
-const path = require("path")
 
+app.use(express.urlencoded({extended:false}));
+
+app.use(express.json());
+                
 
 
 app.listen(3004, () => {
@@ -13,52 +17,23 @@ app.listen(3004, () => {
     console.log("el servidor esta corriendo en puerto 3004");
 })
 
+app.set("view engine","ejs")
 
 
-    app.get("/",(req,res) =>{
 
-        res.sendFile(path.resolve(__dirname, "./Views/home.html"))
+
+const rutas = require("./routes/index")
+
+    app.use("/",rutas); 
+    app.use("/login",rutas); 
+    app.use("/registro",rutas); 
+    app.use("/cart",rutas); 
+    app.use("/productDetail",rutas); 
+    app.use("/altaProducto",rutas); 
         
-        }) ;
+
   
-    app.get("/login",(req,res) =>{
 
-        res.sendFile(path.resolve(__dirname, "./Views/login.html"))
-        
-        }) ;
-    
-
-
-        app.get("/registro",(req,res) =>{
-
-            res.sendFile(path.resolve(__dirname, "./Views/registro.html"))
-            
-            }) ;
-        
-
-            app.get("/productDetail",(req,res) =>{
-
-                res.sendFile(path.resolve(__dirname, "./Views/productDetail.html"))
-                
-                }) ;
-
-
-                app.get("/cart",(req,res) =>{
-
-                    res.sendFile(path.resolve(__dirname, "./Views/cart.html"))
-                    
-                    }) ;
-
-                    app.get("/altaProducto",(req,res) =>{
-
-                        res.sendFile(path.resolve(__dirname, "./Views/altaProducto.html"))
-                        
-                        }) ;
-    
-
-
-
-                        
                     
         
     
