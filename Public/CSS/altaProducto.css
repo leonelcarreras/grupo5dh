@@ -1,0 +1,664 @@
+* { margin: 0px ;
+  padding : 0px;
+  box-sizing: border-box;
+ 
+  }
+  
+  body {  font-family: 'Roboto', sans-serif;
+    background-color: #dadada; ;
+
+  }
+  
+  h3{ 
+    margin-bottom: 4px;
+  }
+.titulo {font-size: 25px;}
+  main  { 
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  main section article {
+  
+    background-color: #dadada;
+    padding:  15px;
+    margin: auto; 
+    
+  }
+  
+  main section article div {
+    border-top: solid 0.5px rgb(185, 181, 181);
+    margin-top: 10px;
+  padding: 10px;}
+  
+
+  section.header-formulario{ background-color: #dadada;
+   
+
+    width: 100vw;
+  padding-top: 10px;
+  font-size: 10px;
+  margin: auto;
+
+} 
+  
+
+
+   section.formulario{ background-color: #dadada;
+   
+    width: 100vw;
+    padding: 0px 10px 0px 10px;
+  font-size: 10px;
+  margin: auto;
+
+
+} 
+  
+  h3{
+    text-align: center  ;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .formulario div {
+    margin: 30px;
+        
+
+    } 
+  
+
+    .burbuja{
+    
+      width: 75vw;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+      border: solid 0.5px rgb(255, 255, 255)
+      ; background-color: white;
+max-width: 800px;
+      
+    }
+
+    .burbuja2{
+
+      width: 75vw;
+      height: 100px;
+      border-radius: 5px;
+      font-size: 15px;
+      border: solid 0.5px rgb(255, 255, 255)
+      ; background-color: white;
+max-width: 800px;
+      
+    }
+
+
+
+    .burbuja3{
+
+      width: 75vw;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+      border: solid 0.5px rgb(255, 255, 255)
+      ; 
+max-width: 800px;
+    }
+
+
+    .burbujaImagen{
+    
+      width: 75vw;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+      border: solid 0.5px #dadada
+      ; 
+max-width: 800px;
+      
+    }
+
+    .burbujatexto{
+    text-align: center;
+      width: 75vw;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+      border: solid 0.5px rgb(255, 255, 255)
+      ; background-color: white;
+max-width: 800px;
+      
+    }
+
+
+    .boton {
+  
+      font-size: 15px;
+      border-radius: 5px;
+      padding:  3px;
+      margin: 10px;
+      height: 3.5vh;
+      background-color: #000000;
+      color: #fff;
+      width: 40vw;
+      flex-wrap: flex ;
+      max-width: 190px;}
+
+  
+
+
+        div.ContenedorDescripcion {
+margin-top: 30px;
+
+        }
+    
+    
+    .boton:hover{  background-color: #2f307a
+  ; zoom: 100%;
+
+}
+   
+    .burbuja:hover{
+
+      background-color:   #f5f5f5
+      ; zoom: 100%;
+
+    }
+
+    .burbuja2:hover{
+
+      background-color:   #f5f5f5
+      ; zoom: 100%;
+
+    }
+    
+    .iconoRegistro {font-size: 35px;}
+
+    .botonImagen p {
+
+      text-align: center;
+      
+      
+            }
+
+
+            div .contenedor3:hover{  background-color: #2f307a
+              ; zoom: 100%;
+            
+            }
+
+            
+        
+            .botonImagen {
+              font-size: 13px;
+              border-radius: 5px;
+              padding:  5px;
+               margin: 0px auto;
+              
+              color: #fff;
+              width: 100%;
+              height: 100%;
+             }
+    
+              .inputFile{
+                position:absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                width: 100%;
+                height: 100%  ;
+                
+      
+                }
+    
+                h2 {margin-bottom: 20px;}
+                
+     .contenedor3 {
+      
+       width: 35vw;
+       background-color: #000000;
+       border-radius: 5px;
+    text-align: center;
+    margin: 0px auto;
+    position: relative;
+    text-align: center;
+    height: 3,5vh;
+  max-width: 150px;}
+    
+    
+    
+    div div.contenedor3{
+      margin: 0px auto;
+      text-align: center;
+      
+    }
+    
+    .contenedor3 div{display: flex;
+    text-align: center;
+    align-items: center;
+     
+    
+    }
+
+
+
+
+
+@media (min-width:768px) {
+
+ 
+
+.titulo{font-size: 35px;}  .iconoRegistro {font-size: 50px;}  .contenedor2 {
+  width: 75vw;
+  max-width: 850px;
+  justify-content: space-between ;
+  display: flex;
+  flex-wrap: wrap; 
+ 
+}  .burbuja{
+    padding: 10px;
+  width: 75vw;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: solid 0.5px white
+  ; background-color: white;
+max-width: 850px;}
+
+.burbuja2{
+  padding: 10px;
+  width: 75vw;
+  height: 130px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: solid 0.5px rgb(255, 255, 255)
+  ; background-color: white;
+max-width: 850px;}
+
+
+
+  
+h3 {font-size: 15px;}
+  .formulario div {
+    margin: 40px;
+  
+    } 
+
+    .boton {
+    
+      font-size: 25px;
+      border-radius: 5px;
+      height: 5vh;
+      padding:  5px;
+      margin: 10px;
+      background-color: #000000;
+      color: #fff;
+      width: 43vw;
+      flex-wrap: flex ;
+      max-width: 250px;}
+
+      a {font-size: 17px;}
+ .contenedor4 h2{
+  font-size: 20px;
+}
+
+ p.botonImagen{
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+      .contenedor3 {
+        width: 35vw;
+       text-align: center;
+       margin: 0px auto;
+       position: relative;
+       text-align: center;
+       height: 5vh;
+       height: 40px;
+    
+       max-width: 180px}
+       
+ 
+       
+
+       .botonImagen {
+        font-size: 13px;
+        border-radius: 5px;
+        padding:  5px;
+         margin: 0px auto;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+       }
+
+        .inputFile{
+          position:absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          width: 100%;
+          height: 100%  ;
+          
+          }
+
+          h2 {margin-bottom: 20px;
+          }
+          
+       }  
+
+   
+       
+          
+
+
+
+
+
+@media (min-width:960px) {
+
+ 
+
+  .titulo{font-size: 45px;}  .iconoRegistro {font-size: 60px;}  .contenedor2 {
+    width: 75vw;
+    max-width: 850px;
+    justify-content: space-between ;
+    display: flex;
+    flex-wrap: wrap; 
+  }   
+
+  .burbuja{
+      padding: 10px;
+    width: 75vw;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: solid 0.5px white
+    ; background-color: white;
+  max-width: 850px;}
+
+
+  .burbuja2{
+    padding: 10px;
+    width: 75vw;
+    height: 150px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: solid 0.5px rgb(255, 255, 255)
+    ; background-color: white;
+  max-width: 850px;
+    
+  
+  }
+    
+  h3 {font-size: 20px;}
+    .formulario div {
+      margin: 50px;
+    
+      } 
+  
+      .boton {
+      height: 5.1vh;
+        font-size: 25px;
+        border-radius: 5px;
+        padding:  5px;
+        margin: 10px;
+        background-color: #000000;
+        color: #fff;
+        width: 45vw;
+        flex-wrap: flex ;
+        max-width: 280px;}
+        a {font-size: 20px;}
+
+
+     .contenedor4 h2{
+      font-size: 25px;
+    }
+    
+     p.botonImagen{
+      font-size: 20px;
+      padding-top: 10px;
+    }
+
+    .contenedor3 {
+      width: 35vw;
+      border-radius: 5px;
+     text-align: center;
+     margin: 0px auto;
+     position: relative;
+     text-align: center;
+     height: 45px;
+     max-width: 200px}
+     
+  }  
+
+  /* 
+Seccion Header */
+
+
+
+header{
+  background-color: #1b1b1b;
+  opacity: 0.9;
+  width: 100vw;
+  height: 50px;
+  display:flex;
+  position:fixed;
+}
+body{
+  background-color: #dadada;
+}
+header .header-bar{
+  display: flex;
+  width: 100vw;
+  height: 56px;
+  padding:8px 16px;
+}
+
+
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+#burger-checkbox {
+  display: none;
+}
+
+header label {
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all .2s ease-in;
+  background-color:transparent;
+}
+
+header label:hover {
+  background-color: transparent;
+}
+
+header label span {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 20px;
+  height: 2px;
+  background-color: #d6d6d6;
+  transition: all .3s linear;
+  opacity: 1;
+  
+}
+
+header label span:first-child {
+  transform: translate(-50%) rotate(0deg);
+}
+
+header label span:last-child {
+  transform: translate(-50%, 7px) rotate(0deg);
+}
+
+#burger-checkbox:checked ~ label span:first-child {
+  transform: translate(-13px) rotate(45deg);
+}
+
+
+
+#burger-checkbox:checked ~ label span:last-child {
+  transform: translate(-13px) rotate(-45deg);
+}
+
+.menu-wrapper {
+  background-color:black;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+  transition: all .5s ease-in-out;
+  
+}
+
+#burger-checkbox:checked ~ .menu-wrapper {
+  left: 0;
+}
+
+
+
+nav a {
+  display: block;
+  padding: 1rem 0;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+
+
+
+header .bar-img{
+  width: 48px;
+  height:48px;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+  text-align: center;
+  background-color:transparent;
+}
+header .bar-img img{
+  padding: 4px 0px 0px 0px;
+  background-color:transparent;
+
+}
+
+header .bar-bag-icon{
+  width: 48px;
+  height:48px;
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  background-color: transparent;
+}
+header .bar-bag-icon span{
+  color:#d6d6d6;
+  padding: 6px 0px 0px 0px;
+  position: relative;
+  background-color: transparent;
+
+}
+
+
+.profile{
+  margin-top:50px;
+  margin-bottom: -100px;
+  border-bottom: 1px solid white;
+}
+.profile img{
+  border-radius: 50%;
+  background-color:white;
+  width: 120px;
+  height: 120px;
+}
+
+
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+  
+
+}
+
+
+.contenedor1  {
+  justify-content: center ;
+  display: flex;
+  flex-wrap: wrap; 
+ 
+}
+
+
+
+.contenedor2 {margin: 0px;
+  width: 75vw;
+  max-width: 850px;
+  justify-content: space-between ;
+  display: flex;
+  flex-wrap: wrap; 
+ 
+}
+
+
+
+
+
+.contenedor4  { text-align: center;
+}
+
+
+.contenedor2 div{ margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+ .contenedor-color {
+  display: flex;
+  flex-wrap: wrap ;
+  margin: 0px;
+
+} 
+
+.contenedor-bateria {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+
+}
+
+div .contenedor-bateria  { margin-right: px;
+  width: 50%;
+}
+
+div .contenedor-color  { width: 30%;;
+}

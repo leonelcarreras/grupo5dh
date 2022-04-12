@@ -49,6 +49,13 @@ app.listen(3004, () => {
                     
                     }) ;
 
+                    app.get("/altaProducto",(req,res) =>{
+
+                        res.sendFile(path.resolve(__dirname, "./Views/altaProducto.html"))
+                        
+                        }) ;
+    
+
 
 
                         
