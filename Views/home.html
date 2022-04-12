@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/stylehome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/868ff58ad9.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +14,7 @@
     <header>
         <div class="header-bar">
 
-            <input type="checkbox" id="burger-checkbox">
+            <input type="checkbox" id="burger-checkbox" class="oculto">
             <label for="burger-checkbox">
                 <span></span>
                 <span></span>
@@ -27,20 +29,20 @@
                         <p>Profile Name</p>
                     </div>
                 <ul>
-                    <li><a href="#">Mis Datos</a></li>
-                    <li><a href="#">Mis Compras</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                    <li><a href="/registro.html">Registrarse</a></li>
                     <li><a href="#">Privacidad</a></li>
                     <li><a href="#">Salir</a></li>
                 </ul>
                 </nav>
             </div>
 
-
-            <div class="bar-img">
-                <img src="/images/nav-icon.png"></img>
-                
+            <div class="nav-768">
+                <div class="bar-img">
+                    <img src="/images/nav-icon.png"></img>
+                    
+                </div>
             </div>
-
 
             <div class="bar-bag-icon">
                 <span class="material-icons-outlined">
@@ -48,7 +50,51 @@
                     </span>
             </div>
 
+            
         </div>
+
+        <!--Navbar x768-->
+            <div class="navbar-768" >
+
+                <img src="/images/nav-icon.png"></img>
+                <div class="logotext">
+                  LlamaQueLlama  
+                </div>
+                <span></span>
+                <div class="nav">
+                    <a href="#">
+                        Samsung
+                    </a>
+                    <a href="#">
+                        Apple
+                    </a>
+                    <a href="#">
+                        LG
+                    </a>
+                    <a href="#">
+                        Motorola
+                    </a>
+                    <a href="#">
+                        Xiaomi
+                    </a>
+                    <a href="#">
+                        Huawei
+                    </a>
+
+                </div>
+                <div class="navprofile">
+                    <span class="material-icons-outlined">
+                        search
+                        </span>
+                    <span class="material-icons-outlined">
+                        shopping_bag
+                        </span>
+                    <div class="user-img">
+
+                    </div>
+                </div>
+
+            </div>
         
         
 
@@ -57,7 +103,76 @@
         
 
     <main>
-        <div class="slider">
+
+        
+
+    
+
+
+
+
+
+        <div class="phone-graphic"><div class="phone-case">
+            <div class="phone-container-outer">
+              <div class="phone-container-inner">
+                <div class="phone-header">
+                  <p class="phone-header-time">1:02</p>
+                  <p class="phone-header-icons"><span class="material-icons">signal_cellular_alt</span> <span class="material-icons">wifi</span> <span class="material-icons battery">battery_std</span></p>
+                    <div class="contact-image"> 
+                        <img src="/images/logollamanegro.png">    
+                    </div>
+                    <p class="contact-phone"> LLAMAQUELLAMA</p>
+                </div>
+                <div class="phone-messages">
+                  <div class="message message-you">
+                    <p>Hola, buenas</p>
+                  </div>
+                  <div class="message message-contact">
+                    <p>¡Bienvenid@ a LlamaQueLlama.com<br>
+                      ¿En qué te podemos ayudar?<br>
+
+                  </div>
+                  <div class="message message-you">
+                    <p>¿Hay nuevos Smartphones?</p>
+                  </div>
+                  <div class="message message-contact">
+                    <p>Claro! tenemos una gran variedad</p>
+                  </div>
+                  <div class="message message-you">
+                    <p>¿Puedo verlos?</p>
+                  </div>
+                  <div class="message message-contact">
+                    <p>Por supuesto! 
+                        Visita nuestra tienda</p>
+                        <div class="arrow">
+                            <img src="/images/arrow.png">
+                            </div>
+                  </div>
+                  
+                </div>
+                <div class="phone-footer">
+                  <div class="phone-footer-icons"><span class="material-icons">photo_camera</span></div>
+                  <div class="phone-footer-input">
+                    <p>Text Message</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+           
+
+
+            <div class="banner1 slide1">
+                    <img src="/images/background-home.jpg">
+            </div>
+
+
+
+
+
+        </div>
+        <div class="slider" align="center">
             
             <ul>
                 <li>
@@ -143,11 +258,54 @@
             </article>
 
         </section>
+
+
+ 
+
+        <div class="button-vertienda" class="disabled-link">
+            <a href="http://">
+                <h2>Ver Tienda</h2>
+            </a>
+        </div>
+
+
+
     </main>
+
+
+
     <footer>
 
+        <div class="logo-grande">
+            <img src="/images/logollama.png">
+        </div>
+        <div class="tarjetas-text">
+            Distintas formas de pago
+        </div>
+        
+        <div class="tarjetas">
+            <div class="visa-card">
+                <i class="fa-brands fa-cc-visa"></i>
+                Visa
+            </div>
+            <div class="mastercard-card">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                Mastercard
+            </div>
+            <div class="paypal-card">
+                <i class="fa-brands fa-cc-paypal"></i>
+                PayPal
+            </div>
+            <div class="amazon-pay-card">
+                <i class="fa-brands fa-cc-amazon-pay"></i>
+                Amazon Pay
+            </div>
+        </div>
+        
+
+
         <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-    
+        <script src="/scripts/script.js"></script>
     </footer>
 </body>
 </html>
