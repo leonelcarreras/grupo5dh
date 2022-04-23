@@ -3,6 +3,9 @@
     "name": "Samsung",
     "price": "100000",
     "categoria": "camara,bateria,procesador",
+    "camara":"10mp",
+    "bateria":"1000mAh",
+    "procesador":"3Hz"
     "description": "producto samsung",
     "imagecolor1":"sasasa.png",
     "imagecolor2":"sasasas.png",
