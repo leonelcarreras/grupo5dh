@@ -1,0 +1,11 @@
+[{
+    "id":1,
+    "name": "Samsung",
+    "price": "100000",
+    "categoria": "camara,bateria,procesador",
+    "description": "producto samsung",
+    "imagecolor1":"sasasa.png",
+    "imagecolor2":"sasasas.png",
+    "imagecolor3":"sasasasa.png"
+}
+]
