@@ -8,19 +8,17 @@
 
     <%- include("./partials/header") %>
 
-
-
   <body>
       
 
-    <main>
+    <main class="product-edit">
 
-       
+
         
             <form action="./" method="get">
 
                 <section class="header-formulario">
-          <div class="titulo">Alta de Productos</div>
+          <div class="titulo">Administrador de Productos</div>
 
           <div class="iconoRegistro"><i class="fa-solid fa-mobile"></i></i> </div>
              </section>
@@ -28,7 +26,7 @@
           <section class="formulario">
         
                
-            <!-- <div>  <label for="Accion"></label> 
+            <div>  <label for="Accion"></label> 
             
                 <select marca="Accion"  
                 class="burbuja" 
@@ -38,7 +36,7 @@
                    
 </select>
                
-</div> -->
+</div>
                 <div>  <label for="Marca"></label> 
             
                     <select marca="Marca" 
@@ -65,32 +63,11 @@
             <input type="text" name="Procesador" placeholder="Procesador" class="burbuja" required >
             
             </div>
-
-            <div> <label for="camara"></label> 
-            
-                <input type="text" name="camaraResolucion" placeholder="Resolucion de Cámara" class="burbuja" required >
-                
-                </div>
-                <div> <label for="video"></label> 
-            
-                    <input type="text" name="videoResolucion" placeholder="Resolucion de Video" class="burbuja" required >
-                    
-                    </div>
-                    <div> <label for="pantalla"></label> 
-            
-                        <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" required >
-                        
-                        </div>
-                        <div> <label for="Procesador"></label> 
-            
-                            <input type="text" name="Procesador" placeholder="Resolución de Pantalla" class="burbuja" required >
-                            
-                            </div>
 <div class="contenedor1">
 <section class="contenedor2">   
                <div    class="contenedor-color">       
                    
-                                <select name="memoria" 
+                                <select name="Color" 
                                 class="burbuja" required
                                 id="">Memoria<option disabled selected>Memoria</option>
                                 <option value="8GB">8GB</option>
@@ -100,7 +77,7 @@
                 </select>
             </div> 
         <div class="contenedor-bateria"> 
-                <select name="almacenamiento" 
+                <select name="Batería" 
                 class="burbuja" required
                 id="">Almacenamiento<option disabled selected>Almacenamiento</option>
                 <option value="64GB">64GB</option>
@@ -116,45 +93,13 @@
 
 
 </div>
-<!-- <div class="contenedor1">
-    <section class="contenedor2">
-                   <div class="contenedor-color">       
-                       
-                    <label for="Camara"></label> 
-            
-                        <input type="text" name="camaraResolucion" placeholder="Camara" class="burbuja" required >
-                        
-                        
-                </div> 
-            <div class="contenedor-bateria"> 
-                <label for="Video"></label> 
-            
-                <input type="text" name="videoResolucion" placeholder="Resolucion de Video " class="burbuja" required >  
-    </div> 
-    </section>
 
-    <div class="contenedor1">
-        <section class="contenedor2">
-                       <div class="contenedor-color">       
-                           
-                        <label for="Pantalla"></label> 
-                
-                            <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" required >
-                            
-                            
-                    </div> 
-                <div class="contenedor-bateria"> 
-                    <label for="Video"></label> 
-                
-                    <input type="text" name="pantallaResolucion" placeholder="Resolucion de Pantalla" class="burbuja" required >  
-        </div> 
-        </section> -->
 
 <div class="contenedor1">
 <section class="contenedor2">
-               <!-- <div class="contenedor-color">       
+               <div class="contenedor-color">       
                    
-                                <select name="almacenamiento" 
+                                <select name="Color" 
                                 class="burbuja"
                                 id="">Color <option disabled selected>Color</option>
                                 <option value="Blanco">Blanco</option>
@@ -163,9 +108,9 @@
                                    <option value="Azul">Azul</option>
                                    <option value="Rosa">Rosa</option>
                 </select>
-            </div>  -->
+            </div> 
         <div class="contenedor-bateria"> 
-                <select name="bateria" 
+                <select name="Batería" 
                 class="burbuja"
                 id="">Bateria<option disabled selected>Batería</option>
                 <option value="3.000 mAh">3.000 mAh</option>
@@ -189,26 +134,12 @@
         <p class="botonImagen">Seleccionar Archivo</p>
          <input type="file" name="" id="ImagenesProducto"  class="inputFile" required =  >   
         </div>
-        <div class="contenedor3">
-            
-            <p class="botonImagen">Seleccionar Archivo</p>
-             <input type="file" name="" id="ImagenesProducto"  class="inputFile" required =  >   
-            </div>
-            <div class="contenedor3">
-            
-                <p class="botonImagen">Seleccionar Archivo</p>
-                 <input type="file" name="" id="ImagenesProducto"  class="inputFile" required =  >   
-                </div>
         </div>
     <div class="ContenedorDescripcion"> <label for="Descripcion"></label> 
             
         <textarea name="" id="" cols="30" rows="20" class="burbuja2" required placeholder="Ingrese descripción del producto"></textarea>
         </div>
     
-
-
- 
-   
 
                         </section>
                         <section class="seccion-boton">

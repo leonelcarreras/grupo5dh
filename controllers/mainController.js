@@ -4,7 +4,8 @@ const mainController = {
 
 home: (req,res) => {res.render("home")},
 altaProducto: (req,res) => {res.render("altaProducto")},
-cart: (req,res) => {res.render("cart")},
+editarProducto: (req,res) => {res.render("editarProducto")},
+
 login: (req,res) => {res.render("login")},
 registro: (req,res) => {res.render("registro")},
 create: (req,res) => {
@@ -22,7 +23,7 @@ create: (req,res) => {
 
 productDetail: (req,res) => {res.render("productDetail")},
 
-    
+        
 
 }
 

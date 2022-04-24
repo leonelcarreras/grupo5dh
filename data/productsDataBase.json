@@ -1,14 +1,40 @@
 [{
     "id":1,
-    "name": "Samsung",
+    "marca": "Samsung",
+    "modelo": "Galaxy S22",
     "price": "100000",
     "categoria": "camara,bateria,procesador",
-    "camara":"10mp",
-    "bateria":"1000mAh",
-    "procesador":"3Hz",
+    "camaraResolucion":"108.0 MP + 10.0 MP + 12.0 MP + 10.0 MP",
+    "videoResolucion":"UHD 8K (7680 x 4320)@24fps",
+    "memoria":"12GB RAM",
+    "almacenamiento":"256GB",
+    "procesador":"CPU Speed 2.99GHz, 2.4GHz, 1.7GH",
+    "pantallaModelo":"Dynamic AMOLED 2X",
+    "pantallaResolucion":"3088 x 1440 (Quad HD+)",
     "description": "producto samsung",
-    "imagecolor1":"sasasa.png",
-    "imagecolor2":"sasasas.png",
-    "imagecolor3":"sasasasa.png"
+    "bateria":"20Hs de uso - 5000mAh - no removible",
+    "imagecolor1":"/images/ultra-black.webp",
+    "imagecolor2":"/images/ultra1.webp",
+    "imagecolor3":"/images/ultra2.webp"
+},
+{
+   
+    "id":2,
+    "marca": "Samsung",
+    "modelo": "Galaxy S22",
+    "price": "100000",
+    "categoria": "camara,bateria,procesador",
+    "camaraResolucion":"108.0 MP + 10.0 MP + 12.0 MP + 10.0 MP",
+    "videoResolucion":"UHD 8K (7680 x 4320)@24fps",
+    "memoria":"12GB RAM",
+    "almacenamiento":"256GB",
+    "procesador":"CPU Speed 2.99GHz, 2.4GHz, 1.7GH",
+    "pantallaModelo":"Dynamic AMOLED 2X",
+    "pantallaResolucion":"3088 x 1440 (Quad HD+)",
+    "description": "producto samsung",
+    "bateria":"20Hs de uso - 5000mAh - no removible",
+    "imagecolor1":"/images/ultra-black.webp",
+    "imagecolor2":"/images/ultra1.webp",
+    "imagecolor3":"/images/ultra2.webp"
 }
 ]

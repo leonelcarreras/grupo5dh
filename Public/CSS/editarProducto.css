@@ -13,12 +13,12 @@
     margin-bottom: 4px;
   }
 .titulo {font-size: 25px;}
-  main  { 
+  main.product-edit  { 
     text-align: center;
     padding-top: 50px;
   }
 
-  main section article {
+  main.product-edit section article {
   
     background-color: #dadada;
     padding:  15px;
@@ -26,13 +26,13 @@
     
   }
   
-  main section article div {
+  main.product-edit section article div {
     border-top: solid 0.5px rgb(185, 181, 181);
     margin-top: 10px;
   padding: 10px;}
   
 
-  section.header-formulario{ background-color: #dadada;
+  main.product-edit section.header-formulario{ background-color: #dadada;
    
 
     width: 100vw;
@@ -44,7 +44,7 @@
   
 
 
-   section.formulario{ background-color: #dadada;
+main.product-edit section.formulario{ background-color: #dadada;
    
     width: 100vw;
     padding: 0px 10px 0px 10px;
@@ -60,14 +60,14 @@
     margin-bottom: 5px;
   }
   
-  .formulario div {
+  main.product-edit .formulario div {
     margin: 30px;
         
 
     } 
   
 
-    .burbuja{
+    main.product-edit .burbuja{
     
       width: 75vw;
       height: 40px;
@@ -79,7 +79,7 @@ max-width: 800px;
       
     }
 
-    .burbuja2{
+    main.product-edit .burbuja2{
 
       width: 75vw;
       height: 100px;
@@ -93,7 +93,7 @@ max-width: 800px;
 
 
 
-    .burbuja3{
+    main.product-edit .burbuja3{
 
       width: 75vw;
       height: 40px;
@@ -105,7 +105,7 @@ max-width: 800px;
     }
 
 
-    .burbujaImagen{
+    main.product-edit .burbujaImagen{
     
       width: 75vw;
       height: 40px;
@@ -117,7 +117,7 @@ max-width: 800px;
       
     }
 
-    .burbujatexto{
+    main.product-edit .burbujatexto{
     text-align: center;
       width: 75vw;
       height: 40px;
@@ -130,7 +130,7 @@ max-width: 800px;
     }
 
 
-    .boton {
+    main.product-edit .boton {
   
       font-size: 15px;
       border-radius: 5px;
@@ -146,34 +146,34 @@ max-width: 800px;
   
 
 
-        div.ContenedorDescripcion {
+      main.product-edit div.ContenedorDescripcion {
 margin-top: 30px;
 
         }
     
     
-    .boton:hover{  background-color: #2f307a
+        main.product-edit .boton:hover{  background-color: #2f307a
   ; zoom: 100%;
 
 }
    
-    .burbuja:hover{
+main.product-edit .burbuja:hover{
 
       background-color:   #f5f5f5
       ; zoom: 100%;
 
     }
 
-    .burbuja2:hover{
+    main.product-edit .burbuja2:hover{
 
       background-color:   #f5f5f5
       ; zoom: 100%;
 
     }
     
-    .iconoRegistro {font-size: 35px;}
+    main.product-edit .iconoRegistro {font-size: 35px;}
 
-    .botonImagen p {
+    main.product-edit .botonImagen p {
 
       text-align: center;
       
@@ -181,14 +181,14 @@ margin-top: 30px;
             }
 
 
-            div .contenedor3:hover{  background-color: #2f307a
+            main.product-edit div .contenedor3:hover{  background-color: #2f307a
               ; zoom: 100%;
             
             }
 
             
         
-            .botonImagen {
+            main.product-edit .botonImagen {
               font-size: 13px;
               border-radius: 5px;
               padding:  5px;
@@ -199,7 +199,7 @@ margin-top: 30px;
               height: 100%;
              }
     
-              .inputFile{
+             main.product-edit .inputFile{
                 position:absolute;
                 top: 0;
                 left: 0;
@@ -214,7 +214,7 @@ margin-top: 30px;
     
                 h2 {margin-bottom: 20px;}
                 
-     .contenedor3 {
+                main.product-edit .contenedor3 {
       
        width: 35vw;
        background-color: #000000;
@@ -225,18 +225,16 @@ margin-top: 30px;
     text-align: center;
     height: 3,5vh;
   max-width: 150px;}
-  
     
     
     
-    div div.contenedor3{
-      margin-top: 10px;
+  main.product-edit div div.contenedor3{
       margin: 0px auto;
       text-align: center;
       
     }
     
-    .contenedor3 div{display: flex;
+    main.product-edit .contenedor3 div{display: flex;
     text-align: center;
     align-items: center;
      
@@ -251,14 +249,14 @@ margin-top: 30px;
 
  
 
-.titulo{font-size: 35px;}  .iconoRegistro {font-size: 50px;}  .contenedor2 {
+  main.product-edit .titulo{font-size: 35px;}  main.product-edit .iconoRegistro {font-size: 50px;}  main.product-edit .contenedor2 {
   width: 75vw;
   max-width: 850px;
   justify-content: space-between ;
   display: flex;
   flex-wrap: wrap; 
  
-}  .burbuja{
+}  main.product-edit .burbuja{
     padding: 10px;
   width: 75vw;
   height: 60px;
@@ -268,7 +266,7 @@ margin-top: 30px;
   ; background-color: white;
 max-width: 850px;}
 
-.burbuja2{
+main.product-edit .burbuja2{
   padding: 10px;
   width: 75vw;
   height: 130px;
@@ -281,13 +279,13 @@ max-width: 850px;}
 
 
   
-h3 {font-size: 15px;}
-  .formulario div {
+main.product-edit h3 {font-size: 15px;}
+main.product-edit.formulario div {
     margin: 40px;
   
     } 
 
-    .boton {
+    main.product-edit .boton {
     
       font-size: 25px;
       border-radius: 5px;
@@ -301,16 +299,16 @@ h3 {font-size: 15px;}
       max-width: 250px;}
 
       a {font-size: 17px;}
- .contenedor4 h2{
+      main.product-edit .contenedor4 h2{
   font-size: 20px;
 }
 
- p.botonImagen{
+main.product-edit p.botonImagen{
   font-size: 16px;
   padding-top: 10px;
 }
 
-      .contenedor3 {
+main.product-edit .contenedor3 {
         width: 35vw;
        text-align: center;
        margin: 0px auto;
@@ -324,7 +322,7 @@ h3 {font-size: 15px;}
  
        
 
-       .botonImagen {
+       main.product-edit .botonImagen {
         font-size: 13px;
         border-radius: 5px;
         padding:  5px;
@@ -334,7 +332,7 @@ h3 {font-size: 15px;}
         height: 100%;
        }
 
-        .inputFile{
+       main.product-edit .inputFile{
           position:absolute;
           top: 0;
           left: 0;
@@ -346,7 +344,7 @@ h3 {font-size: 15px;}
           
           }
 
-          h2 {margin-bottom: 20px;
+          main.product-edith2 {margin-bottom: 20px;
           }
           
        }  
@@ -363,7 +361,7 @@ h3 {font-size: 15px;}
 
  
 
-  .titulo{font-size: 45px;}  .iconoRegistro {font-size: 60px;}  .contenedor2 {
+  main.product-edit .titulo{font-size: 45px;}  .iconoRegistro {font-size: 60px;}  .contenedor2 {
     width: 75vw;
     max-width: 850px;
     justify-content: space-between ;
@@ -371,7 +369,7 @@ h3 {font-size: 15px;}
     flex-wrap: wrap; 
   }   
 
-  .burbuja{
+  main.product-edit .burbuja{
       padding: 10px;
     width: 75vw;
     height: 60px;
@@ -382,7 +380,7 @@ h3 {font-size: 15px;}
   max-width: 850px;}
 
 
-  .burbuja2{
+  main.product-edit .burbuja2{
     padding: 10px;
     width: 75vw;
     height: 150px;
@@ -395,13 +393,13 @@ h3 {font-size: 15px;}
   
   }
     
-  h3 {font-size: 20px;}
-    .formulario div {
+  main.product-edit h3 {font-size: 20px;}
+  main.product-edit .formulario div {
       margin: 50px;
     
       } 
   
-      .boton {
+      main.product-edit .boton {
       height: 5.1vh;
         font-size: 25px;
         border-radius: 5px;
@@ -415,16 +413,16 @@ h3 {font-size: 15px;}
         a {font-size: 20px;}
 
 
-     .contenedor4 h2{
+        .contenedor4 h2{
       font-size: 25px;
     }
     
-     p.botonImagen{
+   p.botonImagen{
       font-size: 20px;
       padding-top: 10px;
     }
 
-    .contenedor3 {
+    main.product-edit.contenedor3 {
       width: 35vw;
       border-radius: 5px;
      text-align: center;
@@ -613,7 +611,7 @@ header .bar-bag-icon span{
 }
 
 
-.contenedor1  {
+main.product-edit .contenedor1  {
   justify-content: center ;
   display: flex;
   flex-wrap: wrap; 
@@ -622,7 +620,7 @@ header .bar-bag-icon span{
 
 
 
-.contenedor2 {margin: 0px;
+main.product-edit .contenedor2 {margin: 0px;
   width: 75vw;
   max-width: 850px;
   justify-content: space-between ;
@@ -635,32 +633,32 @@ header .bar-bag-icon span{
 
 
 
-.contenedor4  { text-align: center;
+main.product-edit .contenedor4  { text-align: center;
 }
 
 
-.contenedor2 div{ margin: 0px;
+main.product-edit .contenedor2 div{ margin: 0px;
   display: flex;
   flex-wrap: wrap;
 } 
 
- .contenedor-color {
+main.product-edit .contenedor-color {
   display: flex;
   flex-wrap: wrap ;
   margin: 0px;
 
 } 
 
-.contenedor-bateria {
+main.product-edit .contenedor-bateria {
   display: flex;
   flex-wrap: wrap;
   margin-left: 30px;
 
 }
 
-div .contenedor-bateria  { margin-right: px;
+main.product-edit div .contenedor-bateria  { margin-right: px;
   width: 50%;
 }
 
-div .contenedor-color  { width: 30%;;
+main.product-edit div .contenedor-color  { width: 30%;;
 }
