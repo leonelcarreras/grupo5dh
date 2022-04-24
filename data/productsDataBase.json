@@ -155,6 +155,47 @@
     "imagecolor1":"/images/moto_g200/moto_g200.jpg",
     "imagecolor2":"/images/moto_g200/moto_g200_Azul.png",
     "imagecolor3":"/images/moto_g200/moto_g200_morado.png"
+},
+
+{
+    "id":9,
+    "marca": "iPhone",
+    "modelo": "iPhone 13 Pro",
+    "price": "270000",
+    "categoria": "camara,bateria,procesador",
+    "camaraResolucion":"Sistema de cámaras Pro de 12 MP, Fotos panorámicas (hasta 63 MP)",
+    "videoResolucion":"Grabación de video HDR en Dolby Vision de hasta 4K a 60 cps, Grabación de video 4K a 24 cps, 25 cps, 30 cps o 60 cps ,Grabación de video HD de 1080p a 25 cps, 30 cps o 60 cps ,Grabación de video HD de 720p a 30 cps",
+    "memoria":"4GB RAM",
+    "almacenamiento":"128GB, 256GB, 512GB, 1TB",
+    "procesador":"Chip A15 Bionic",
+    "pantallaModelo":"Pantalla OLED",
+    "pantallaResolucion":"6.1 pulgadas",
+    "description": "producto iPhone",
+    "bateria":"Tipo: Li-Ion, que le da capacidad de uso de hasta 22 h",
+    "imagecolor1":"/images/iPhone_13pro/iPhone_13Pro_blanco.jpg",
+    "imagecolor2":"/images/iPhone_13pro/iPhone_13Pro_celeste.jpg",
+    "imagecolor3":"/images/iPhone_13pro/iPhone_13Pro_negro.jpg"
+},
+
+{
+    "id":10,
+    "marca": "iPhone",
+    "modelo": "iPhone SE",
+    "price": "170000",
+    "categoria": "camara,bateria,procesador",
+    "camaraResolucion":"Sistema de cámaras de 12 MP, Fotos panorámicas (hasta 63 MP), camara frontal de 7 MP",
+    "videoResolucion":"Grabación de video 4K a 24 cps, 25 cps, 30 cps o 60 cps, Grabación de video HD de 1080p a 25 cps, 30 cps o 60 cps ,Grabación de video HD de 720p a 30 cps",
+    "memoria":"4GB RAM",
+    "almacenamiento":"64GB ,128GB ,256GB",
+    "procesador":"Chip A15 Bionic",
+    "pantallaModelo":"Pantalla OLED",
+    "pantallaResolucion":"4.7 pulgadas",
+    "description": "producto iPhone",
+    "bateria":"Tipo: Li-Ion, que le da capacidad de uso de hasta 15 h",
+    "imagecolor1":"/images/iPhoneSE/iPhoneSE_blanco.jpg",
+    "imagecolor2":"/images/iPhoneSE/iPhoneSE_negro.jpg",
+    "imagecolor3":"/images/iPhoneSE/iPhoneSE_rojo.jpg"
 }
+
 
 ]
