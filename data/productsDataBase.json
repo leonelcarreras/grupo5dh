@@ -195,7 +195,48 @@
     "imagecolor1":"/images/iPhoneSE/iPhoneSE_blanco.jpg",
     "imagecolor2":"/images/iPhoneSE/iPhoneSE_negro.jpg",
     "imagecolor3":"/images/iPhoneSE/iPhoneSE_rojo.jpg"
+},
+
+{
+    "id":11,
+    "marca": "Huawei",
+    "modelo": "Huawei P30 PRO",
+    "price": "300000",
+    "categoria": "camara,bateria,procesador",
+    "camaraResolucion":"Cámara delantera de 32Mp, 4 cámaras traseras de 40Mpx/20Mpx/8Mpx",
+    "videoResolucion":"4K 30 FPS: 25.200 Kbps, 1080p 30 FPS: 5100 Kbps",
+    "memoria":"8GB RAM",
+    "almacenamiento":"256GB",
+    "procesador":" HiSilicon Kirin 980 Octa-Core de 2.6GHz",
+    "pantallaModelo":"Pantalla OLED",
+    "pantallaResolucion":"6,47 pulgadas, FHD+ 2340 x 1080",
+    "description": "producto Huawei",
+    "bateria":"4200 mAh",
+    "imagecolor1":"/images/huawei_p30pro/huawei_p30pro_azul.jpg",
+    "imagecolor2":"/images/huawei_p30pro/huawei_p30pro_celeste.jpg",
+    "imagecolor3":"/images/huawei_p30pro/huawei_p30pro_negro.jpg"
+},
+
+{
+    "id":12,
+    "marca": "Huawei",
+    "modelo": "Huawei P40 Lite",
+    "price": "150000",
+    "categoria": "camara,bateria,procesador",
+    "camaraResolucion":" Cámara trasera: 48 MP (lente Gran Angular, apertura f/1.8) + 8 MP (lente Ultra Gran Angular) + 2 MP (lente Macro) + 2 MP (lente Bokeh), Cámara frontal: 16 megapíxeles, apertura f/2.0",
+    "videoResolucion":"4K 30 FPS: 25.200 Kbps, 1080p 30 FPS: 5100 Kbps",
+    "memoria":"6GB RAM",
+    "almacenamiento":"128GB",
+    "procesador":" HUAWEI Kirin 810",
+    "pantallaModelo":"Pantalla OLED",
+    "pantallaResolucion":"6,4 pulgadas, FHD+ 2310 x 1080",
+    "description": "producto Huawei",
+    "bateria":"4200 mAh",
+    "imagecolor1":"/images/huawei_P40lite/Huawei_P40lite_negro.jpg",
+    "imagecolor2":"/images/huawei_P40lite/Huawei_P40lite_verde.jpg",
+    "imagecolor3":"/images/huawei_P40lite/Huawei_P40lite_rosa.jpg"
 }
+
 
 
 ]
