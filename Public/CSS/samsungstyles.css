@@ -177,6 +177,7 @@ margin-top: 50px;
 }
 
 .productDetail .com{
+  margin: 0.5%;
   color: rgb(255, 255, 255);
   background-color: rgb(63, 63, 63);
 }
@@ -228,7 +229,17 @@ margin-top: 50px;
   margin-top: 20px;
 }
 
+.edicionProducto {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
 
+.com2{
+  color: rgb(255, 255, 255);
+  background-color: rgb(120, 120, 120);
+
+}
 
 /*dispositivos desde 316px*/
 @media (max-width: 361px) {
