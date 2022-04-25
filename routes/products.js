@@ -5,6 +5,7 @@ const path = require("path")
 const productController = require("../controllers/productsController");
 
 const multer = require("multer");
+const productsController = require("../controllers/productsController");
 // const { path } = require('../app');
 
 const storage = multer.diskStorage ({
@@ -61,7 +62,8 @@ router.get("/editarProducto", productController.editarProducto);
 router.get("/cart", productController.cart);
 
 
+// Delete Producto //
 
-
+router.delete ("/delete/:id", productsController.destroy);
 
 module.exports = router;    

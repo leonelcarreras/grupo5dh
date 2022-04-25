@@ -57,10 +57,19 @@ productDetail: (req,res) => {
     let productDetail = products.filter((p) => p.id == id )
     
     res.render("productDetail", {productDetail})
-}
+},
 
+// Delete - borrar un producto//
 
-}
+destroy:(req,res)=> {
+    const productId =Number (req.params.id);
+    const finalProducts = products.filter ((p) =>p.id != productId);
+    
+    fs.writeFileSync(productsFilePath, JSON.stringify (finalProducts), "utf-8");
+    res.redirect("/http://localhost:3004/products/");
+},
+
+};
 
 
 

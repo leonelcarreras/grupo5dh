@@ -65,7 +65,7 @@
                         <form action="http://localhost:3004/products/editarProducto">
                         <button class ="com2" type="submit">Editar producto</button>
                         </form>
-                        <form action="http://localhost:3004/editarProducto">
+                        <form action="/products/delete<%= product.id%>?_method=DELETE" method ="POST" style="display: inline-flex">
                         <button class ="com2" type="submit">Eliminar producto</button>
                         </form>
                          </div>
