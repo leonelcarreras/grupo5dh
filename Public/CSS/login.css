@@ -1,17 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #dadada;
-}
 
-.rememberUser {
+main.formLogin .rememberUser {
 
   font-size: 12px;
   margin-left: 10px;
@@ -20,12 +10,12 @@ body {
   font-weight: bold;
 }
 
-.rememberUserTag {
+main.formLogin .rememberUserTag {
 margin-right: 5px;
 align-items:stretch;
 }
 
-section.header-formulario {
+main.formLogin section.header-formulario {
   background-color: #dadada;
 
   width: 100vw;
@@ -34,16 +24,16 @@ section.header-formulario {
   margin: auto;
 }
 
-main {
+main.formLogin .formLogin main {
   text-align: center;
   padding-top: 50px;
 }
 
-.titulo {
+main.formLogin .formLogin .titulo {
   font-size: 25px;
 }
 
-section.formularioLogin {
+main.formLogin section.formularioLogin {
   background-color: #dadada;
   border: #666666;
 
@@ -52,17 +42,17 @@ section.formularioLogin {
   margin: auto;
 }
 
-.formularioLogin div {
+main.formLogin .formularioLogin div {
   margin: 35px;
   text-align: center;
   align-items: center;
 }
 
-.fotoperfil {
+main.formLogin .fotoperfil {
   font-size: 70%;
 }
 
-.burbuja {
+main.formLogin .burbuja {
   width: 75vw;
   height: 40px;
   border-radius: 5px;
@@ -72,12 +62,12 @@ section.formularioLogin {
   max-width: 800px;
 }
 
-.boton:hover {
+main.formLogin .boton:hover {
   background-color: #2f307a;
   zoom: 100%;
 }
 
-.burbuja:hover {
+main.formLogin .burbuja:hover {
   background-color: #f5f5f5;
   zoom: 100%;
 }
@@ -118,7 +108,7 @@ section.formularioLogin {
   .iconoUsuario {
     font-size: 60px;
   }
-  .burbuja {
+  main.formLogin .burbuja {
     padding: 10px;
     width: 75vw;
     height: 60px;
@@ -128,7 +118,7 @@ section.formularioLogin {
     background-color: white;
     max-width: 850px;
   }
-  .rememberUser {
+  main.formLogin main.formLogin .rememberUser {
 
     font-size: 20px;
     margin-left: 10px;
@@ -138,14 +128,14 @@ section.formularioLogin {
   }
   
 
-  h3 {
+  main.formLogin h3 {
     font-size: 15px;
   }
-  .formulario div {
+  main.formLogin .formulario div {
     margin: 40px;
   }
 
-  .boton {
+  main.formLogin .boton {
     font-size: 25px;
     border-radius: 5px;
     padding: 10px;
@@ -156,19 +146,19 @@ section.formularioLogin {
     flex-wrap: flex;
     max-width: 180px;
   }
-  a {
+  main.formLogin a {
     font-size: 17px;
   }
 }
 
 @media (min-width: 960px) {
-  .titulo {
+  main.formLogin .titulo {
     font-size: 45px;
   }
-  .iconoUsuario {
+  main.formLogin .iconoUsuario {
     font-size: 80px;
   }
-  .burbuja {
+  main.formLogin .burbuja {
     padding: 10px;
     width: 75vw;
     height: 60px;
@@ -179,14 +169,14 @@ section.formularioLogin {
     max-width: 850px;
   }
 
-  h3 {
+  main.formLogin h3 {
     font-size: 20px;
   }
-  .formulario div {
+  main.formLogin .formulario div {
     margin: 50px;
   }
 
-  .boton {
+  main.formLogin .boton {
     font-size: 25px;
     border-radius: 5px;
     padding: 10px;
@@ -197,182 +187,22 @@ section.formularioLogin {
     flex-wrap: flex;
     max-width: 210px;
   }
-  a {
+  main.formLogin a {
     font-size: 20px;
   }
 }
 
-/* 
-Seccion Header */
 
-header {
-  background-color: #1b1b1b;
-  opacity: 0.9;
-  width: 100vw;
-  height: 50px;
-  display: flex;
-  position: fixed;
-}
-body {
-  background-color: #dadada;
-}
 
-header .header-bar {
-  display: flex;
-  width: 100vw;
-  height: 56px;
-  padding: 8px 16px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#burger-checkbox {
-  display: none;
-}
-
-header label {
-  position: relative;
-  width: 30px;
-  cursor: pointer;
-  z-index: 2;
-  transition: all 0.2s ease-in;
-  background-color: transparent;
-}
-
-header label:hover {
-  background-color: transparent;
-}
-
-header label span {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  width: 20px;
-  height: 2px;
-  background-color: #d6d6d6;
-  transition: all 0.3s linear;
-  opacity: 1;
-}
-
-header label span:first-child {
-  transform: translate(-50%) rotate(0deg);
-}
-
-header label span:last-child {
-  transform: translate(-50%, 7px) rotate(0deg);
-}
-
-#burger-checkbox:checked ~ label span:first-child {
-  transform: translate(-13px) rotate(45deg);
-}
-
-#burger-checkbox:checked ~ label span:last-child {
-  transform: translate(-13px) rotate(-45deg);
-}
-
-.menu-wrapper {
-  background-color: black;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
-  transition: all 0.5s ease-in-out;
-}
-
-#burger-checkbox:checked ~ .menu-wrapper {
-  left: 0;
-}
-
-nav a {
-  display: block;
-  padding: 1rem 0;
-  color: white;
-  font-family: "Roboto";
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-header .bar-img {
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: 50%;
-  margin-left: -24px;
-  text-align: center;
-  background-color: transparent;
-}
-header .bar-img img {
-  padding: 4px 0px 0px 0px;
-  background-color: transparent;
-}
-
-header .bar-bag-icon {
-  width: 48px;
-  height: 48px;
-  font-size: 30px;
-  position: absolute;
-  text-align: center;
-  right: 0;
-  background-color: transparent;
-}
-header .bar-bag-icon span {
-  color: #d6d6d6;
-  padding: 6px 0px 0px 0px;
-  position: relative;
-  background-color: transparent;
-}
-
-.profile {
+main.formLogin .profile {
   margin-top: 50px;
   margin-bottom: -100px;
   border-bottom: 1px solid white;
 }
-.profile img {
+main.formLogin.profile img {
   border-radius: 50%;
   background-color: white;
   width: 120px;
   height: 120px;
 }
 
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
