@@ -61,12 +61,12 @@ productDetail: (req,res) => {
 
 // Delete - borrar un producto//
 
-destroy:(req,res)=> {
-    const productId =Number (req.params.id);
+destroy: (req, res) => {
+    const productId = Number(req.params.id);
     const finalProducts = products.filter ((p) =>p.id != productId);
     
-    fs.writeFileSync(productsFilePath, JSON.stringify (finalProducts), "utf-8");
-    res.redirect("/http://localhost:3004/products/");
+    fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts), "utf-8");
+    res.redirect("/");
 },
 
 };

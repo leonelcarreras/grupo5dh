@@ -64,6 +64,6 @@ router.get("/cart", productController.cart);
 
 // Delete Producto //
 
-router.delete ("/delete/:id", productsController.destroy);
+router.delete("/:id", productsController.destroy);
 
 module.exports = router;    
