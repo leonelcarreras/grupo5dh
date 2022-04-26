@@ -11,37 +11,29 @@
   <body>
       
 
-    <main class="product-edit">
+    <main class="altaProducto">
 
-
+        <%  productToEdit.forEach(product => {
+                   
+            %> 
         
-            <form action="./" method="get">
+        <form action="/products/editarProducto/<%=product.id%>?_method=PATCH" method="post" enctype="multipart/form-data" >
 
-                <section class="header-formulario">
-          <div class="titulo">Administrador de Productos</div>
+            <section class="header-formulario">
+      <div class="titulo">Estas editando el producto <%=product.name%> <%=product.modelo%></div>
 
-          <div class="iconoRegistro"><i class="fa-solid fa-mobile"></i></i> </div>
+          <% });	%>
+      <div class="iconoRegistro"><i class="fa-solid fa-mobile"></i></i> </div>
              </section>
 
           <section class="formulario">
         
                
-            <div>  <label for="Accion"></label> 
+                <div>  <label for="marca"></label> 
             
-                <select marca="Accion"  
-                class="burbuja" 
-                id="Accion"><option disabled selected>Seleccione una acción</option>
-                <option value="Alta de Producto">Alta de Producto</option>
-                   <option value="Modificacion de Producto">Modificación de Producto</option>
-                   
-</select>
-               
-</div>
-                <div>  <label for="Marca"></label> 
-            
-                    <select marca="Marca" 
-                    class="burbuja" placeholder="Marca"
-                    id="Marca"><option disabled selected>Marca</option>
+                    <select name="marca" 
+                    class="burbuja" placeholder="Marca" 
+                    id="marca"><option disabled selected>Marca</option>
                     <option value="Apple">Apple</option>
                        <option value="Huawei">Huawei</option>
                        <option value="LG">LG</option>
@@ -54,20 +46,41 @@
 
     <div> <label for="Modelo"></label> 
             
-        <input type="text" name="Modelo" placeholder="Modelo" class="burbuja" required >
+        <input type="text" name="modelo" placeholder="Modelo" class="burbuja" required >
         
         </div>
 
         <div> <label for="Procesador"></label> 
             
-            <input type="text" name="Procesador" placeholder="Procesador" class="burbuja" required >
+            <input type="text" name="procesador" placeholder="Procesador" class="burbuja" required >
             
             </div>
+
+            <div> <label for="camara"></label> 
+            
+                <input type="text" name="camaraResolucion" placeholder="Resolucion de Cámara" class="burbuja" required >
+                
+                </div>
+                <div> <label for="video"></label> 
+            
+                    <input type="text" name="videoResolucion" placeholder="Resolucion de Video" class="burbuja" required >
+                    
+                    </div>
+                    <div> <label for="pantalla"></label> 
+            
+                        <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" required >
+                        
+                        </div>
+                        <div> <label for="pantallaResolucion"></label> 
+            
+                            <input type="text" name="pantallaResolucion" placeholder="Resolución de Pantalla" class="burbuja" required >
+                            
+                            </div>
 <div class="contenedor1">
 <section class="contenedor2">   
                <div    class="contenedor-color">       
                    
-                                <select name="Color" 
+                                <select name="memoria" 
                                 class="burbuja" required
                                 id="">Memoria<option disabled selected>Memoria</option>
                                 <option value="8GB">8GB</option>
@@ -77,7 +90,7 @@
                 </select>
             </div> 
         <div class="contenedor-bateria"> 
-                <select name="Batería" 
+                <select name="almacenamiento" 
                 class="burbuja" required
                 id="">Almacenamiento<option disabled selected>Almacenamiento</option>
                 <option value="64GB">64GB</option>
@@ -96,21 +109,15 @@
 
 
 <div class="contenedor1">
+    <section class="contenedor2">   
+        <div  class="contenedor-color">       
+            
+                   <input type="number" name="price" id="price" placeholder="Precio" class="burbuja">
 <section class="contenedor2">
-               <div class="contenedor-color">       
-                   
-                                <select name="Color" 
-                                class="burbuja"
-                                id="">Color <option disabled selected>Color</option>
-                                <option value="Blanco">Blanco</option>
-                                   <option value="Negro">Negro</option>
-                                   <option value="Rojo">Rojo</option>
-                                   <option value="Azul">Azul</option>
-                                   <option value="Rosa">Rosa</option>
-                </select>
-            </div> 
+              </div>
+
         <div class="contenedor-bateria"> 
-                <select name="Batería" 
+                <select name="bateria" 
                 class="burbuja"
                 id="">Bateria<option disabled selected>Batería</option>
                 <option value="3.000 mAh">3.000 mAh</option>
@@ -126,20 +133,38 @@
 
     </div>
 
-    
-    <div class="contenedor4"> 
-        <h2> Imágenes del Producto</h2>
+     <h2> Imágenes del Producto</h2>
+    <div class="contenedor5">
+     <div class="contenedor4"> 
+      
         <div class="contenedor3">
             
-        <p class="botonImagen">Seleccionar Archivo</p>
-         <input type="file" name="" id="ImagenesProducto"  class="inputFile" required =  >   
+        <p class="botonImagen">Img-1</p>
+         <input type="file" name="imagecolor1" id="ImagenesProducto"  class="inputFile" required   >   
         </div>
-        </div>
+      
+        <div class="contenedor3">
+            
+            <p class="botonImagen">Img-2</p>
+             <input type="file" name="imagecolor2" id="ImagenesProducto"  class="inputFile" required   >   
+            </div>
+            <div class="contenedor3">
+            
+                <p class="botonImagen">Img-3</p>
+                 <input type="file" name="imagecolor3" id="ImagenesProducto"  class="inputFile" required   >   
+                </div>
+        
+    </div>
+    </div>
     <div class="ContenedorDescripcion"> <label for="Descripcion"></label> 
             
-        <textarea name="" id="" cols="30" rows="20" class="burbuja2" required placeholder="Ingrese descripción del producto"></textarea>
+        <textarea name="descripcion" id="" cols="30" rows="20" class="burbuja2" required placeholder="Ingrese descripción del producto"></textarea>
         </div>
     
+
+
+ 
+   
 
                         </section>
                         <section class="seccion-boton">
@@ -148,15 +173,15 @@
                         
                             </div>  
                             <div >
-                                <a href="./";> <i class="fas fa-reply"> </i>Volver al Inicio</a> 
+                                <a href="./"> <i class="fas fa-reply"> </i>Volver al Inicio</a> 
                              </div>
                             </section>
                              
                             </form>
-                            </section>
                         
-        </div>
-        </main>
+                    
+                    
+    </main>
 
     </body>
    
