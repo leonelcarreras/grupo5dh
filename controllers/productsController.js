@@ -17,16 +17,19 @@ altaProducto: (req,res) => {res.render("altaProducto")},
 store: (req, res) => {
     let id = products[products.length - 1].id + 1;
 
-let image = req.file.filename ; 
+let images = req.files ; 
+let imagecolor1 = images[0].filename;
+let imagecolor2 = images[1].filename;
+let imagecolor3 = images[2].filename ;  
 
     let newProduct = {
        id,
        ...req.body,
-       image,
-       
+       imagecolor1,
+       imagecolor2,
+       imagecolor3,
      };
      console.log(newProduct);
-    
     
      products.push(newProduct);
      fs.writeFileSync(productsFilePath, JSON.stringify(products), "utf-8");
@@ -36,15 +39,46 @@ let image = req.file.filename ;
 
 
 
-editarProducto: (req,res) => {res.render("editarProducto")},
+editarProducto: (req,res) => {
+    let id = req.params.id
+    let productToEdit = products.filter((p) => p.id == id )
+    
+    res.render("editarProducto" ,{productToEdit})},
 
-edit: (req, res) => {
 
-    let productId = req.params.id
-let productToEdit = products.filter((p) => p.id == productId )
+updateProduct: (req, res) => {
+    const id = Number(req.params.id);
+    let productToEdit = products.find((p) => p.id === Number(id));
 
-    res.render("editarProducto", {productToEdit})
-},
+    // let image = "default-image.png";
+    // console.log(req.file);
+    // if (req.file) {
+    //   image = req.file.filename;
+    // }
+
+    productToEdit = {
+      ...req.body,
+      id: id,
+    //   image,
+    };
+
+    const updatedProduct = products.map((p) => {
+      if (p.id === productToEdit.id) {
+        return (p = { ...productToEdit });
+      }
+      return p;
+    });
+
+    fs.writeFileSync(
+      productsFilePath,
+      JSON.stringify(updatedProduct),
+      "utf-8"
+    );
+
+    res.redirect("/");
+  },
+
+
 
 cart: (req,res) => {res.render("cart")},
 
