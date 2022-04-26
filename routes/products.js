@@ -5,7 +5,12 @@ const path = require("path")
 const productController = require("../controllers/productsController");
 
 const multer = require("multer");
+<<<<<<< HEAD
 //  const { path } = require('/app');
+=======
+const productsController = require("../controllers/productsController");
+// const { path } = require('../app');
+>>>>>>> e3791ef5c808c0df09c845b4f319c2eff0c056ab
 
 const storage = multer.diskStorage ({
     destination: function(req, file, cb) {
@@ -46,7 +51,8 @@ router.patch("/editarProducto/:id", productController.updateProduct);
 router.get("/cart", productController.cart);
 
 
+// Delete Producto //
 
-
+router.delete("/:id", productsController.destroy);
 
 module.exports = router;    

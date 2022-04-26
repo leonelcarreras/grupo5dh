@@ -62,11 +62,15 @@
                         </form>
                          </div>
                         <div class="edicionProducto">
+<<<<<<< HEAD
                         <form action="/products/editarProducto/<%-product.id%>">
+=======
+                        <form action="http://localhost:3004/products/editarProducto">
+>>>>>>> e3791ef5c808c0df09c845b4f319c2eff0c056ab
                         <button class ="com2" type="submit">Editar producto</button>
                         </form>
-                        <form action="http://localhost:3004/editarProducto">
-                        <button class ="com2" type="submit">Eliminar producto</button>
+                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method ="POST" style="display: inline-flex">
+                        <button type="submit" class ="com2" >Eliminar producto</button>
                         </form>
                          </div>
                         </div>
