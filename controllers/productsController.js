@@ -18,6 +18,9 @@ store: (req, res) => {
     let id = products[products.length - 1].id + 1;
 
 let images = req.files ; 
+
+console.log(images);
+
 let imagecolor1 = images[0].filename;
 let imagecolor2 = images[1].filename;
 let imagecolor3 = images[2].filename ;  
@@ -48,10 +51,12 @@ editarProducto: (req,res) => {
 
     updateProduct: (req, res) => {
         const productId = Number(req.params.id);
+        console.log(productId);
         let productToEdit = products.find((p) => p.id === productId);
-    
+    console.log(productToEdit);
     let images = req.files ; 
-
+    console.log(req.files);
+console.log(images);
     let imagecolor1 = images[0].filename;
     let imagecolor2 = images[1].filename;
     let imagecolor3 = images[2].filename;  

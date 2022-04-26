@@ -12,7 +12,7 @@ const storage = multer.diskStorage ({
     destination: function(req, file, cb) {
 
         let folder = path.join(__dirname ,"../Public/images/products")
-
+console.log(folder);
         cb(null,folder);
         console.log(folder);
     },
@@ -42,7 +42,7 @@ router.post("/",upload.any("imagecolor1","imagecolor2","imagecolor3") ,productCo
 
 // Edición del Producto //
 router.get("/editarProducto/:id", productController.editarProducto);
-router.patch("/editarProducto/:id",upload.any("imagecolor1","imagecolor2","imagecolor3"), productController.updateProduct);
+router.patch("/editarProducto/:id",upload.any("imagecolor1","imagecolor2","imagecolor3"),productController.updateProduct);
 
 router.get("/cart", productController.cart);
 

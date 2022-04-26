@@ -17,10 +17,10 @@
                    
             %> 
         
-        <form action="/products/editarProducto/<%= productToEdit.id%>?_method=PATCH" method="post" >
+        <form action="/products/editarProducto/<%=product.id%>?_method=PATCH" method="post" enctype="multipart/form-data" >
 
             <section class="header-formulario">
-      <div class="titulo">Estas editando el producto <%-product.name%> <%-product.modelo%> </div>
+      <div class="titulo">Estas editando el producto <%=product.name%> <%=product.modelo%></div>
 
           <% });	%>
       <div class="iconoRegistro"><i class="fa-solid fa-mobile"></i></i> </div>
@@ -142,8 +142,7 @@
         <p class="botonImagen">Img-1</p>
          <input type="file" name="imagecolor1" id="ImagenesProducto"  class="inputFile" required   >   
         </div>
-    
-    
+      
         <div class="contenedor3">
             
             <p class="botonImagen">Img-2</p>
@@ -154,7 +153,7 @@
                 <p class="botonImagen">Img-3</p>
                  <input type="file" name="imagecolor3" id="ImagenesProducto"  class="inputFile" required   >   
                 </div>
-         
+        
     </div>
     </div>
     <div class="ContenedorDescripcion"> <label for="Descripcion"></label> 
