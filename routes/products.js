@@ -30,16 +30,13 @@ console.log(folder);
 const upload = multer ({storage});
 
 
-router.get("/", productController.home);
+// router.get("/", productController.home);
+
+router.get("/products", productController.products);
 
 // Detalle del Producto //
 router.get("/productDetail/:id", productController.productDetail);
 
-<<<<<<< HEAD
-router.get("/products", productController.products);
-
-=======
->>>>>>> 0f3a8568ee3f46a71f6070caccda8919da4f6435
 // Alta del Producto //
 
 router.get("/altaProducto", productController.altaProducto);
