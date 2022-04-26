@@ -13,7 +13,7 @@
     "pantallaResolucion":"3088 x 1440 (Quad HD+)",
     "description": "producto samsung",
     "bateria":"20Hs de uso - 5000mAh - no removible",
-    "imagecolor1":"/images/ultra-black.webp",
+    "imagecolor1":"ultra-black.webp",
     "imagecolor2":"/images/ultra1.webp",
     "imagecolor3":"/images/ultra2.webp"
 },
@@ -33,7 +33,7 @@
     "pantallaResolucion":"6.2 pulgadas (Full HD+)",
     "description": "producto samsung",
     "bateria":"20Hs de uso - 4000 mAh/5500mAh ",
-    "imagecolor1":"/images/S21/S21_blanco.png",
+    "imagecolor1":"S21_blanco.png",
     "imagecolor2":"/images/S21/S21_gris.png",
     "imagecolor3":"/images/S21/S21_morado.png"
 },
@@ -52,7 +52,7 @@
     "pantallaResolucion":"6.8 pulgadas P-OLED(FHD+(1080x2460))",
     "description": "producto LG",
     "bateria":"4300mAh",
-    "imagecolor1":"/images/lg_Velvet/LG_Velvet_verde1.jpg",
+    "imagecolor1":"LG_Velvet_verde1.jpg",
     "imagecolor2":"/images/lg_Velvet/LG_Velvet_blanco2.jpg",
     "imagecolor3":"/images/lg_Velvet/LG_Velvet_negro3.jpg"
 },
@@ -72,7 +72,7 @@
     "pantallaResolucion":"6,21 pulgadas OLED FHD+ (1080 x 2248)",
     "description": "producto LG",
     "bateria":"3.550mAh Li-Polymer",
-    "imagecolor1":"/images/lg_G8S/LG_G8S_Azul.jpg",
+    "imagecolor1":"LG_G8S_Azul.jpg",
     "imagecolor2":"/images/lg_G8S/LG_G8S_Blanco.jpg",
     "imagecolor3":"/images/lg_G8S/LG_G8S_Negro.jpg"
 },
@@ -92,7 +92,7 @@
     "pantallaResolucion":"6,67 pulgadas FullHD+(2.400x1.080)",
     "description": "producto Xiaomi",
     "bateria":"5000 mAh",
-    "imagecolor1":"/images/xiaomi_11T/xiaomi_11T_blanco.jpg",
+    "imagecolor1":"xiaomi_11T_blanco.jpg",
     "imagecolor2":"/images/xiaomi_11T/xiaomi_11T_negro.jpg",
     "imagecolor3":"/images/xiaomi_11T/xiaomi_11T_celeste.jpg"
 },
@@ -112,7 +112,7 @@
     "pantallaResolucion":"6,67 pulgadas 120 Hz HDR10",
     "description": "producto Xiaomi",
     "bateria":"5020 mAh + 33W",
-    "imagecolor1":"/images/xiaomi_note10/xiaomi_note10_naranja.jpg",
+    "imagecolor1":"xiaomi_note10_naranja.jpg",
     "imagecolor2":"/images/xiaomi_note10/xiaomi_note10_gris.jpg",
     "imagecolor3":"/images/xiaomi_note10/xiaomi_note10_blanco.jpg"
 },
@@ -132,7 +132,7 @@
     "pantallaResolucion":"OLED de 6.7 pulgadas de 144 Hz con HDR10+",
     "description": "producto Motorola",
     "bateria":"4800 mAh, TurboPower™ de 68 W",
-    "imagecolor1":"/images/motorola_edge30/motorola_Edge30Pro_2.jpeg",
+    "imagecolor1":"motorola_Edge30Pro_2.jpeg",
     "imagecolor2":"/images/motorola_edge30/motorola_Edge30Pro_negro.jpg",
     "imagecolor3":"/images/motorola_edge30/motorola_Edge30Pro_plata.jpg"
 },
@@ -152,7 +152,7 @@
     "pantallaResolucion":"OLED de 6.7 pulgadas",
     "description": "producto Motorola",
     "bateria":"50000 mAh",
-    "imagecolor1":"/images/moto_g200/moto_g200.jpg",
+    "imagecolor1":"moto_g200.jpg",
     "imagecolor2":"/images/moto_g200/moto_g200_Azul.png",
     "imagecolor3":"/images/moto_g200/moto_g200_morado.png"
 },
@@ -172,7 +172,7 @@
     "pantallaResolucion":"6.1 pulgadas",
     "description": "producto iPhone",
     "bateria":"Tipo: Li-Ion, que le da capacidad de uso de hasta 22 h",
-    "imagecolor1":"/images/iPhone_13pro/iPhone_13Pro_blanco.jpg",
+    "imagecolor1":"iPhone_13Pro_blanco.jpg",
     "imagecolor2":"/images/iPhone_13pro/iPhone_13Pro_celeste.jpg",
     "imagecolor3":"/images/iPhone_13pro/iPhone_13Pro_negro.jpg"
 },
@@ -192,7 +192,7 @@
     "pantallaResolucion":"4.7 pulgadas",
     "description": "producto iPhone",
     "bateria":"Tipo: Li-Ion, que le da capacidad de uso de hasta 15 h",
-    "imagecolor1":"/images/iPhoneSE/iPhoneSE_blanco.jpg",
+    "imagecolor1":"iPhoneSE_blanco.jpg",
     "imagecolor2":"/images/iPhoneSE/iPhoneSE_negro.jpg",
     "imagecolor3":"/images/iPhoneSE/iPhoneSE_rojo.jpg"
 },
@@ -212,7 +212,7 @@
     "pantallaResolucion":"6,47 pulgadas, FHD+ 2340 x 1080",
     "description": "producto Huawei",
     "bateria":"4200 mAh",
-    "imagecolor1":"/images/huawei_p30pro/huawei_p30pro_azul.jpg",
+    "imagecolor1":"huawei_p30pro_azul.jpg",
     "imagecolor2":"/images/huawei_p30pro/huawei_p30pro_celeste.jpg",
     "imagecolor3":"/images/huawei_p30pro/huawei_p30pro_negro.jpg"
 },
@@ -232,7 +232,7 @@
     "pantallaResolucion":"6,4 pulgadas, FHD+ 2310 x 1080",
     "description": "producto Huawei",
     "bateria":"4200 mAh",
-    "imagecolor1":"/images/huawei_P40lite/Huawei_P40lite_negro.jpg",
+    "imagecolor1":"Huawei_P40lite_negro.jpg",
     "imagecolor2":"/images/huawei_P40lite/Huawei_P40lite_verde.jpg",
     "imagecolor3":"/images/huawei_P40lite/Huawei_P40lite_rosa.jpg"
 }
