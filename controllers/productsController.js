@@ -5,7 +5,7 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const productsController = {
@@ -40,44 +40,47 @@ let imagecolor3 = images[2].filename ;
 
 
 editarProducto: (req,res) => {
-    let id = req.params.id
-    let productToEdit = products.filter((p) => p.id == id )
+    let productId = Number(req.params.id)
+    let productToEdit = products.filter((p) => p.id == productId )
     
     res.render("editarProducto" ,{productToEdit})},
 
 
-updateProduct: (req, res) => {
-    const id = Number(req.params.id);
-    let productToEdit = products.find((p) => p.id === Number(id));
+    updateProduct: (req, res) => {
+        const productId = Number(req.params.id);
+        let productToEdit = products.find((p) => p.id === productId);
+    
+    let images = req.files ; 
 
-    // let image = "default-image.png";
-    // console.log(req.file);
-    // if (req.file) {
-    //   image = req.file.filename;
-    // }
+    let imagecolor1 = images[0].filename;
+    let imagecolor2 = images[1].filename;
+    let imagecolor3 = images[2].filename;  
 
     productToEdit = {
       ...req.body,
-      id: id,
-    //   image,
+      id: productId,
+      imagecolor1,
+      imagecolor2,
+      imagecolor3,
     };
 
-    const updatedProduct = products.map((p) => {
-      if (p.id === productToEdit.id) {
-        return (p = { ...productToEdit });
-      }
-      return p;
-    });
-
-    fs.writeFileSync(
-      productsFilePath,
-      JSON.stringify(updatedProduct),
-      "utf-8"
-    );
-
-    res.redirect("/");
-  },
-
+    const updatedProducts = products.map((p) => {
+        if (p.id === productToEdit.id) {
+          return (p = { ...productToEdit });
+        }
+        return p;
+      });
+  
+      fs.writeFileSync(
+        productsFilePath,
+        JSON.stringify(updatedProducts),
+        "utf-8"
+      );
+  
+      res.redirect("/");
+    },
+  
+   
 
 
 cart: (req,res) => {res.render("cart")},

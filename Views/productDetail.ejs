@@ -17,7 +17,7 @@
               <div class="container">
                 
                 <% productDetail.forEach(product => {
-                   
+                 
                     %> 
                      <div class="products">
                         <div class="img-container">
@@ -55,27 +55,23 @@
                         <p class="memoria"><%-product.bateria%></p>
                         <div class="precio">
                             <p class="Procesador">PRECIO</p>
-                        <p class="precio2">$<%-product.price%></p>
+                        <p class="precio2">$<%-product.price %></p>
                         <input class="com" type="submit" value="Comprar">
                         <form action="http://localhost:3004/">
                         <button class ="com" type="submit">Volver a tienda</button>
                         </form>
                          </div>
                         <div class="edicionProducto">
-<<<<<<< HEAD
                         <form action="/products/editarProducto/<%-product.id%>">
-=======
-                        <form action="http://localhost:3004/products/editarProducto">
->>>>>>> e3791ef5c808c0df09c845b4f319c2eff0c056ab
                         <button class ="com2" type="submit">Editar producto</button>
                         </form>
-                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method ="POST" style="display: inline-flex">
+                        <form action="/products/<%=product.id %>?_method=DELETE" method ="POST" style="display: inline-flex">
                         <button type="submit" class ="com2" >Eliminar producto</button>
                         </form>
                          </div>
                         </div>
                     </div>
-    
+
                     <% });	%>
                          </section>   
             <!-- <footer >

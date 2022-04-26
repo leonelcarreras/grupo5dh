@@ -212,19 +212,20 @@ margin-top: 30px;
       
                 }
     
-                h2 {margin-bottom: 20px;}
+         
+                
                 
      .contenedor3 {
       
-       width: 20vw;
+       width: 18vw;
        background-color: #000000;
        border-radius: 5px;
     text-align: center;
     margin: 0px auto;
     position: relative;
     text-align: center;
-    height: 3,5vh;
-  max-width: 150px;}
+    height: 3.5vh;
+  max-width: 110px;}
   
     
     
@@ -245,7 +246,11 @@ margin-top: 30px;
     }
 
 
-
+    .contenedor4 .contenedor3  { 
+  
+      margin-left: 5px;
+        
+      }
 
 
 @media (min-width:768px) {
@@ -268,7 +273,11 @@ margin-top: 30px;
   border: solid 0.5px white
   ; background-color: white;
 max-width: 850px;}
-
+.contenedor4 .contenedor3  { 
+  
+  margin-left: 30px;
+    
+  }
 .burbuja2{
   padding: 10px;
   width: 75vw;
@@ -302,7 +311,7 @@ h3 {font-size: 15px;}
       max-width: 250px;}
 
       a {font-size: 17px;}
- .contenedor4 h2{
+  h2{
   font-size: 20px;
 }
 
@@ -312,15 +321,14 @@ h3 {font-size: 15px;}
 }
 
       .contenedor3 {
-        width: 15vw;
+        width: 18vw;
        text-align: center;
        margin: 0px auto;
        position: relative;
        text-align: center;
        height: 5vh;
        height: 40px;
-    
-       max-width: 180px}
+       max-width: 160px}
        
  
        
@@ -347,8 +355,7 @@ h3 {font-size: 15px;}
           
           }
 
-          h2 {margin-bottom: 20px;
-          }
+     
           
        }  
 
@@ -371,6 +378,12 @@ h3 {font-size: 15px;}
     display: flex;
     flex-wrap: wrap; 
   }   
+
+  .contenedor4 .contenedor3  { 
+  
+    margin-left: 45px;
+      
+    }
 
   .burbuja{
       padding: 10px;
@@ -396,6 +409,12 @@ h3 {font-size: 15px;}
   
   }
     
+
+  .contenedor4 .contenedor3  { 
+  
+    margin-left: 70px;
+      
+    }
   h3 {font-size: 20px;}
     .formulario div {
       margin: 50px;
@@ -428,14 +447,14 @@ h3 {font-size: 15px;}
     }
 
     .contenedor3 {
-      width: 8vw;
+      width: 20vw;
       border-radius: 5px;
      text-align: center;
      margin: 0px auto;
      position: relative;
      text-align: center;
      height: 45px;
-     
+     max-width: 180px;
     }
      
   }  
@@ -479,27 +498,30 @@ h3 {font-size: 15px;}
 
 
 .contenedor5 { 
+
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center ;
 
 
 }
-.contenedor4  { 
+.contenedor4   { 
   
   display: flex;
   flex-wrap: wrap;
+margin: 0px,30px,0px,30px;
 
+}
+
+.contenedor5 div  { 
   
+
+margin: 0px,30px,0px,30px;
 
 }
 
 
-.contenedor4 div  { 
-  
-margin-left: 20px;
-  
-}
 
 .contenedor2 div{ margin: 0px;
   display: flex;
