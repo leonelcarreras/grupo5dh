@@ -226,41 +226,6 @@
         "imagecolor1": "/images/huawei_P40lite/Huawei_P40lite_negro.jpg",
         "imagecolor2": "/images/huawei_P40lite/Huawei_P40lite_verde.jpg",
         "imagecolor3": "/images/huawei_P40lite/Huawei_P40lite_rosa.jpg"
-    },
-    {
-        "id": 13,
-        "marca": "Apple",
-        "modelo": "asd",
-        "procesador": "asd",
-        "camaraResolucion": "asd",
-        "videoResolucion": "asd",
-        "pantallaModelo": "asd",
-        "pantallaResolucion": "asd",
-        "memoria": "16GB",
-        "almacenamiento": "64GB",
-        "price": "10000",
-        "bateria": "3.000 mAh",
-        "descripcion": "asdasd",
-        "imagecolor1": "1650933348780-IMG_1594.jpg",
-        "imagecolor2": "1650933348786-IMG_4978.jpg",
-        "imagecolor3": "1650933348789-IMG_8822.jpg"
-    },
-    {
-        "id": 14,
-        "marca": "Apple",
-        "modelo": "Iphone 13",
-        "procesador": "asd",
-        "camaraResolucion": "asd",
-        "videoResolucion": "asd",
-        "pantallaModelo": "asd",
-        "pantallaResolucion": "asd",
-        "memoria": "16GB",
-        "almacenamiento": "64GB",
-        "price": "1300",
-        "bateria": "3.000 mAh",
-        "descripcion": "asdasd",
-        "imagecolor1": "1650937790590-IMG_1594.jpg",
-        "imagecolor2": "1650937790597-IMG_4978.jpg",
-        "imagecolor3": "1650937790601-IMG_8822.jpg"
     }
+   
 ]
