@@ -32,7 +32,7 @@ const upload = multer ({storage});
 
 // router.get("/", productController.home);
 
-router.get("/products", productController.products);
+router.get("/", productController.products);
 
 // Detalle del Producto //
 router.get("/productDetail/:id", productController.productDetail);

@@ -49,7 +49,7 @@ editarProducto: (req,res) => {
     res.render("editarProducto" ,{productToEdit})},
 
 
-    updateProduct: (req, res) => {
+  updateProduct: (req, res) => {
         const productId = Number(req.params.id);
         console.log(productId);
         let productToEdit = products.find((p) => p.id === productId);
