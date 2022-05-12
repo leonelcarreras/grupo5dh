@@ -12,7 +12,7 @@ Destacamos que pesa a las dificultades se logró una buena versión entregable p
 
 3.	¿Qué queremos mejorar?
 Como equipo queremos incorporar tanto la herramienta trello, como las reuniones de equipo para organizar mejor el trabajo, hacer más eficiente la comunicación y el entendimiento de las consignas para cada sprint.
-
+.
 
 
 
