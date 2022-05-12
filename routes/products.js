@@ -34,8 +34,14 @@ const upload = multer ({storage});
 
 router.get("/", productController.products);
 
+
+
 // Detalle del Producto //
 router.get("/productDetail/:id", productController.productDetail);
+
+// PRoductos por Marca //
+
+router.get("/:marca",productController.productsByBrand)
 
 // Alta del Producto //
 
