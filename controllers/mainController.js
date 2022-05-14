@@ -23,7 +23,7 @@ create: (req,res) => {
 
 productDetail: (req,res) => {res.render("productDetail")},
 
-        
+cart: (req,res) => {res.render("cart")},      
 
 }
 

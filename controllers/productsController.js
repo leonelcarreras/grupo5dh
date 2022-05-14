@@ -12,6 +12,20 @@ const productsController = {
 
 products:(req,res) => {res.render("products", { products })},
 
+cart: (req,res) => {res.render("cart")},
+
+productsByBrand:(req,res) =>
+
+{  
+  
+  let productBrand = req.params.marca
+
+   let productsByBrand = products.filter((p) => p.marca == productBrand );
+
+  res.render("productsByBrand",{ productsByBrand })
+
+} ,
+
 altaProducto: (req,res) => {res.render("altaProducto")},
 
 store: (req, res) => {
@@ -85,10 +99,9 @@ console.log(images);
       res.redirect("/");
     },
   
-   
 
 
-cart: (req,res) => {res.render("cart")},
+
 
 
 // Detalle del Producto //

@@ -12,7 +12,7 @@ router.get("/registro", mainController.registro);
 router.post("/registro/create", mainController.create);
 
 
-
+router.get("/cart", mainController.cart);
 
 
 

@@ -17,6 +17,11 @@ header{
 body{
     background-color: #dadada;
 }
+
+.linkTienda {
+color: white;
+
+}
 header .header-bar{
     display: flex;
     width: 100vw;
