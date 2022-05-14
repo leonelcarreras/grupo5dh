@@ -22,7 +22,7 @@ findAll: function () {
 create: function (userData){
 
             }, 
-findMyPk: function () {
+findByPk: function () {
 
 let allUsers = this.findAll(),
 let userFound= allUsers.find(oneUser => oneUser.id ===id)
@@ -33,13 +33,14 @@ let userFound= allUsers.find(oneUser => oneUser.id ===id)
 findField: function (field, text) {
 
     let allUsers = this.findAll(),
-    let userFound= allUsers.find(oneUser => oneUser.[field] ===id)
+    let userFound= allUsers.find(oneUser => oneUser.[field] === text)
     
     },
 create: function (userData) {
     let allUsers= this.findAll();
     allUsers.push(userData);
     fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' ')); 
+}
 },
 
 create: function (userData){
