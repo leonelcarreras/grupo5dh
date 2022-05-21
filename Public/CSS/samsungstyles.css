@@ -266,7 +266,7 @@ margin-top: 50px;
       display: flex;
       width: 33%;
       padding: 8px;
-      margin: 10px 10px 10px;
+      margin: 10px -10px 10px;
       cursor: pointer;
       flex-direction:row;
     } 
