@@ -115,6 +115,7 @@ margin-top: 50px;
   padding: 8px;
   margin: 10px 10px 15px;
   cursor: pointer;
+  border-radius: 20px;
  
 }
 
@@ -123,6 +124,7 @@ margin-top: 50px;
   display: flex;
   flex-direction:column;
   align-items:flex-start;
+  
 }
 
 .productDetail .img-container img {
@@ -141,7 +143,7 @@ margin-top: 50px;
 .productDetail .especificacion {
   display: flex-end;
   width: 80%;
-  margin: 50px;
+  margin: 30px;
 }
 
 .productDetail .modelo {
@@ -159,12 +161,13 @@ margin-top: 50px;
 }
 
 .productDetail .precio {
-  border: 2px solid rgba(0,0,0,.2);
+  border: 2px solid rgba(6, 6, 6, 0.2);
   padding: 8px;
   margin: 10px 10px 15px;
   font-family: Arial, Helvetica, Sans-serif;
   color: white;
   font-size: 12px;
+  border-radius: 25px;
 }
 .productDetail .precio2 {
  
@@ -176,11 +179,7 @@ margin-top: 50px;
   font-size: 200%;
 }
 
-.productDetail .com{
-  margin: 0.5%;
-  color: rgb(255, 255, 255);
-  background-color: rgb(63, 63, 63);
-}
+
 
 .productDetail .product_img1 {
   width: 10%;
@@ -222,12 +221,7 @@ margin-top: 50px;
   text-decoration: none;
   color: rgb(1, 1, 1);
 }
-.productDetail .Novedades {
-  color: #837d7d;
-  text-align: center;
-  font-size: 12px;
-  margin-top: 20px;
-}
+
 
 .edicionProducto {
   display: flex;
@@ -235,11 +229,34 @@ margin-top: 50px;
   justify-content: space-around;
 }
 
-.com2{
-  color: rgb(255, 255, 255);
-  background-color: rgb(120, 120, 120);
-
+.com{
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 10px;
+  height: 2.5vh;
+  background-color: #060606;
+  color: #fff;
+  width: 40vw;
+  flex-wrap: flex;
+  max-width: 120px;
 }
+
+
+.com2{
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 10px;
+  height: 2.5vh;
+  background-color: #6b6b6b;
+  color: #fff;
+  width: 40vw;
+  flex-wrap: flex;
+  max-width: 130px;
+}
+
+
 
 /*dispositivos desde 316px*/
 @media (max-width: 361px) {
