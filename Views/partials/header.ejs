@@ -9,17 +9,23 @@
         </label>
         <div class="menu-wrapper">
             <nav>
+
+        
                 <div class="profile">
                     <a href="#">
                         <img src="/images/Blank-profile.png"
-                    </a>
-                    <p>Profile Name</p>
-                </div>
+                    </a>        <% if (locals.isLogged){ %> 
+                        <p> <%=locals.userLogged.nombre%> <%=locals.userLogged.nombre%></p>
+                </div>  
             <ul>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/registro">Registrarse</a></li>
+               
+                <li><a href="/users/userProfile">Perfil de Usuario</a></li>
+                
+                <li><a href="/users/logout">Salir</a></li>     <% } else  {%> 
+                  <li><a href="/users/login">Login</a></li>
+                <li><a href="/users/registro">Registrarse</a></li>
+                <% } %>
                 <li><a href="#">Privacidad</a></li>
-                <li><a href="#">Salir</a></li>
             </ul>
             </nav>
         </div>
@@ -77,7 +83,8 @@
                 <span class="material-icons-outlined">
                     shopping_bag
                     </span>
-                <div class="user-img">
+                    <a href="http://localhost:3004/users/userProfile"> <div class="user-img">
+                    </div></a>
 
                 </div>
             </div>

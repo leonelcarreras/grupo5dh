@@ -15,7 +15,7 @@
     <main class="formLogin">
 
 
-        <form action="/login/create" method="POST">
+        <form action="/users/login" method="POST">
   
         <section class="header-formulario">
     <div>
@@ -28,15 +28,19 @@
             <section class="formularioLogin">
                 
     <div>
-    <input type="email" name="nombreUsuario" placeholder="Ingrese su e-mail" class="burbuja" required>
-    
+    <input type="text" name="email" placeholder="Ingrese su e-mail" value="<%= locals.oldData ? oldData.email :null %>" class="burbuja"  >
+    <% if (locals.errors && locals.errors.email){  %> 
+        <h3 class="error"> <%=errors.email.msg %> </h3>
+        <% } %> 
     </div>
 
    
                 <div><label for="Contraseña"></label> 
     
-                    <input type="password" name="password" placeholder="Contraseña" class="burbuja" required  >
-                   
+                    <input type="password" name="password" placeholder="Contraseña" class="burbuja">
+                    <% if (locals.errors && locals.errors.password){  %> 
+                        <h3 class="error"> <%=errors.password.msg %> </h3>
+                        <% } %> 
                     <p class="rememberUser"><input type="checkbox" name="recordarUsuario" id="rememberUser" class="rememberUserTag"> <label for="rememberUser" >Recordar Ususario y Contraseña</label> </p>
                 </div>
 
@@ -48,7 +52,7 @@
             
                 </div>  
                 <div class="forgotPassword">
-                    <a href="./";> ¿Olvidaste tu contraseña? </a> 
+                    <a href="/users/registro";> ¿No estas Registrado? </a> 
                  </div>
                 </section>
           
