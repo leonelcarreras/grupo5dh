@@ -232,9 +232,8 @@ margin-top: 50px;
 .com{
   font-size: 15px;
   border-radius: 5px;
-  padding: 3px;
   margin: 10px;
-  height: 2.5vh;
+  height: 3.5vh;
   background-color: #060606;
   color: #fff;
   width: 40vw;
@@ -246,9 +245,8 @@ margin-top: 50px;
 .com2{
   font-size: 15px;
   border-radius: 5px;
-  padding: 3px;
   margin: 10px;
-  height: 2.5vh;
+  height: 3.5vh;
   background-color: #6b6b6b;
   color: #fff;
   width: 40vw;
@@ -287,5 +285,31 @@ margin-top: 50px;
       cursor: pointer;
       flex-direction:row;
     } 
+
+    .com{
+      font-size: 14px;
+      border-radius: 5px;
+      margin: 10px;
+      height: 3vh;
+      background-color: #060606;
+      color: #fff;
+      width: 40vw;
+      flex-wrap: flex;
+      max-width: 120px;
+    }
+    
+    
+    .com2{
+      font-size: 12px;
+      border-radius: 5px;
+      margin: 10px;
+      height: 3vh;
+      background-color: #6b6b6b;
+      color: #fff;
+      width: 40vw;
+      flex-wrap: flex;
+      max-width: 110px;
+    }
+    
     
 }

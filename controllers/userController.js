@@ -4,7 +4,7 @@ const { validationResult } = require("express-validator");
 
 const user = require("../models/users");
 const bcryptjs = require("bcryptjs");
-const { memoryStorage } = require("multer");
+
 
 const userController = {
 
@@ -50,10 +50,14 @@ const userController = {
 
         }
 
+    
+
 
         userToCreate = {
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10)
+            userProfileImage:req.file.filename,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            
 
         }
 
@@ -127,7 +131,7 @@ const userController = {
 
     logout: (req, res) => {
 
-        req.session.destroy;
+        req.session.destroy();
 
         return res.redirect("/")
 
