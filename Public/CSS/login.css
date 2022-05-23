@@ -80,7 +80,6 @@ main.formLogin .burbuja:hover {
 .boton {
   font-size: 20px;
   border-radius: 5px;
-  padding: 5px;
   margin: 10px;
   background-color: #000000;
   color: #fff;
@@ -138,7 +137,6 @@ main.formLogin .burbuja:hover {
   main.formLogin .boton {
     font-size: 25px;
     border-radius: 5px;
-    padding: 10px;
     margin: 10px;
     background-color: #000000;
     color: #fff;
@@ -179,7 +177,6 @@ main.formLogin .burbuja:hover {
   main.formLogin .boton {
     font-size: 25px;
     border-radius: 5px;
-    padding: 10px;
     margin: 10px;
     background-color: #000000;
     color: #fff;

@@ -38,7 +38,7 @@ router.post("/registro",upload.single("userProfileImage"),validations,userContro
 router.get("/login", guestMiddleware, userController.login);
 router.post("/login", userController.loginProcess);
 router.get("/userProfile", authMiddleware, userController.profile);
-router.get("/logout", authMiddleware, userController.logout);
+router.get("/logout", userController.logout);
 module.exports = router
 
 

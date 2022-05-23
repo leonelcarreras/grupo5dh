@@ -68,5 +68,13 @@
   "apellido": "Coping",
   "email": "hcoping9@google.ca",
   "password": "RHv9pldcA8On"
+ },
+ {
+  "id": 11,
+  "nombre": "Tomas Augusto",
+  "apellido": "Cevasco",
+  "email": "Tom9@gmail.com",
+  "password": "$2a$10$qIYvfnrwTOMY8rwBttZg..EVzQzVoc0nDxEI83ryqPqGBA/LMchya",
+  "userProfileImage": "1653327352728-Carpaccio-de-salmon.jpg"
  }
 ]

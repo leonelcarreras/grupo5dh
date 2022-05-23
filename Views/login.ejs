@@ -28,7 +28,7 @@
             <section class="formularioLogin">
                 
     <div>
-    <input type="text" name="email" placeholder="Ingrese su e-mail" value="<%= locals.oldData ? oldData.email :null %>" class="burbuja"  >
+    <input type="text" name="email" placeholder="Ingrese su e-mail"  class="burbuja"  >
     <% if (locals.errors && locals.errors.email){  %> 
         <h3 class="error"> <%=errors.email.msg %> </h3>
         <% } %> 
