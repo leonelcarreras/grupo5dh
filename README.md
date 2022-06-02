@@ -164,22 +164,5 @@ Pantalla resistente a impactos.
 <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&style=flat-square" />
 </a>
 
-<!--Verónica Startschewoi,-->   
-    
-<p align="center">
-<img src="https://i.imgur.com/O4dersu.png" width="250" height="30"/>
-<h4 align="center">34 años. Pilar, Bs As.</h4>   
-<h4 align="center">Profesora de Inglés. Neurosicoeducadora. Futura Licenciada en Educación.</h4>  
-<h4 align="center">Actualmente trabajando en la Escuela Técnica Roberto Rocca.</h4>  
-
-    
-<p align="center">
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-GitHub-181717?logo=GitHub&logoColor=white&style=flat-square" />
-</a>
-<a href="#" target="blank">
-<img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&style=flat-square" />
-</a>
-
 
     
