@@ -15,7 +15,7 @@
                     <a href="#">
                         <img src="/images/Blank-profile.png"
                     </a>        <% if (locals.isLogged){ %> 
-                        <p> <%=locals.userLogged.nombre%></p>
+                        <p> <%=locals.userLogged.nombre%> <%=locals.userLogged.nombre%></p>
                 </div>  
             <ul>
                
@@ -77,6 +77,8 @@
 
             </div>
             <div class="navprofile">
+
+               
                 <span class="material-icons-outlined">
                     search
                     </span>
@@ -84,7 +86,15 @@
                     shopping_bag
                     </span>
                     <a href="http://localhost:3004/users/userProfile"> <div class="user-img">
+                        
                     </div></a>
+                    <% if (locals.isLogged){ %>
+                        <span class="material-icons-outlined"><a href="http://localhost:3004/users/logout" style="text-decoration:none;color:#d6d6d6;">
+                            logout 
+                            </span></a>
+                        
+                            <%  } %> 
+                    
 
                 </div>
             </div>

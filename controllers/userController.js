@@ -50,14 +50,14 @@ const userController = {
 
         }
 
-    
+
 
 
         userToCreate = {
             ...req.body,
-            userProfileImage:req.file.filename,
+            userProfileImage: req.file.filename,
             password: bcryptjs.hashSync(req.body.password, 10),
-            
+
 
         }
 
@@ -71,7 +71,11 @@ const userController = {
 
     // Logueo del Usuario
 
-    login: (req, res) => { res.render("login") },
+    login: (req, res) => {
+        console.log(req.body);
+
+        res.render("login")
+    },
 
     loginProcess: (req, res) => {
 
@@ -83,9 +87,16 @@ const userController = {
             let contraseñaOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
             // console.log(contraseñaOk);
             if (contraseñaOk) {
-                delete userToLogin.password;
+
                 req.session.userLogged = userToLogin;
                 console.log(req.session);
+
+                if (req.body.recordarUsuario) {
+                    res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 })
+                }
+
+                console.log(req.bodyc);
+
                 res.redirect("/users/userProfile")
 
             }
@@ -122,6 +133,7 @@ const userController = {
 
 
     profile: (req, res) => {
+        console.log(req.cookies.userEmail);
         res.render("UserProfile", {
             user: req.session.userLogged
 
@@ -131,7 +143,9 @@ const userController = {
 
     logout: (req, res) => {
 
+        res.clearCookie("userEmail");
         req.session.destroy();
+
         return res.redirect("/")
 
 

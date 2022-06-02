@@ -1,7 +1,8 @@
 const express = require("express");
 const session = require("express-session");
 const path = require('path');
-
+const cookies = require("cookie-parser")
+    ;
 const methodOverride = require('method-override');
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 
@@ -13,6 +14,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+
+app.use(cookies());
 
 app.use(userLoggedMiddleware);
 

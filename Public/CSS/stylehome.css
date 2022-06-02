@@ -382,6 +382,7 @@ header .bar-bag-icon span{
     }
     .navprofile{
         margin-top: 10px;
+        margin-right: 50px;
         width: 150px;
         display: flex;
     }
@@ -391,8 +392,7 @@ header .bar-bag-icon span{
         color:#d6d6d6;
     }
     .navprofile .user-img{
-
-        margin-left: 5px;
+margin-left: 3px;
         width: 35px;
         height: 35px;
         border-radius: 50%;
@@ -414,7 +414,7 @@ header .bar-bag-icon span{
     }
 
     
-
+  
     .tarjetas-text{
 
         z-index: 6;
