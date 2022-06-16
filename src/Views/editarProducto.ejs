@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include("./partials/head") %>
+<body>
+  
+<!-- Heder -->
+
+    <%- include("./partials/header") %>
+
+  <body>
+      
+
+    <main class="altaProducto">
+
+        <%   product.forEach(product => {
+                   
+            %> 
+        
+        <form action="/products/editarProducto/<%=product.id%>?_method=PATCH" method="post" enctype="multipart/form-data" >
+
+            <section class="header-formulario">
+      <div class="titulo">Estas editando el producto <%=product.nombre%> </div>
+
+         
+      <div class="iconoRegistro"><i class="fa-solid fa-mobile"></i></i> </div>
+             </section>
+
+          <section class="formulario">
+        
+               
+                <div>  <label for="marca"></label> 
+            
+                    <select name="marca_id" 
+                    class="burbuja" placeholder="Marca" 
+                    id="marca_id"><option disabled selected>Marca</option>
+                    <% marcas.forEach(marca => { %>
+                        <option value="<%= marca.id %>"><%= marca.nombre_marca %></option>
+                        <% }); %>
+    </select>
+                   
+ </div>
+
+    <div> <label for="Modelo"></label> 
+            
+        <input type="text" name="nombre" placeholder="Modelo" class="burbuja" value="<%= product.nombre%>" required >
+        
+        </div>
+
+        <div> <label for="Procesador"></label> 
+            
+            <input type="text" name="procesador" placeholder="Procesador" class="burbuja" value="<%= product.product_variants.procesador%>" required >
+            
+            </div>
+
+            <div> <label for="camara"></label> 
+            
+                <input type="text" name="camaraResolucion" placeholder="" class="burbuja" value="<%= product.product_variants.camaraResolucion%>" required >
+                
+                </div>
+                <div> <label for="video"></label> 
+            
+                    <input type="text" name="videoResolucion" placeholder="Resolucion de Video" class="burbuja" value="<%= product.product_variants.videoResolucion%>" required >
+                    
+                    </div>
+                    <div> <label for="pantalla"></label> 
+            
+                        <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" value="<%= product.product_variants.pantallaModelo%>" required >
+                        
+                        </div>
+                        <div> <label for="pantallaResolucion"></label> 
+            
+                            <input type="text" name="pantallaResolucion" placeholder="Resolución de Pantalla" class="burbuja" value="<%= product.product_variants.pantallaResolucion%>" required >
+                            
+                            </div>
+<div class="contenedor1">
+<section class="contenedor2">   
+               <div    class="contenedor-color">       
+                   
+                                <select name="memoria" 
+                                class="burbuja" required
+                                id="">Memoria<option disabled selected>Memoria</option>
+                                <option value="8GB">8GB</option>
+                                   <option value="16GB">16GB</option>
+                                   <option value="32GB">32GB</option>
+                                   <option value="64GB">64GB</option>
+                </select>
+            </div> 
+        <div class="contenedor-bateria"> 
+                <select name="almacenamiento" 
+                class="burbuja" required
+                id="">Almacenamiento<option disabled selected>Almacenamiento</option>
+                <option value="64GB">64GB</option>
+                   <option value="128GB">128GB</option>
+                   <option value="256GB">256GB</option>
+                   <option value="512GB">512GB</option>
+</select>   
+</div> 
+
+
+</section>
+</div>
+
+
+</div>
+
+
+<div class="contenedor1">
+    <section class="contenedor2">   
+        <div  class="contenedor-color">       
+            
+                   <input type="number" name="price" id="price" placeholder="<%= product.product_variants.price%>" class="burbuja">
+<section class="contenedor2">
+              </div>
+
+        <div class="contenedor-bateria"> 
+                <select name="bateria" 
+                class="burbuja"
+                id="">Bateria<option disabled selected>Batería</option>
+                <option value="3.000 mAh">3.000 mAh</option>
+                   <option value="3.000 mAh">3.500 mAh</option>
+                   <option value="3.000 mAh">4.000 mAh</option>
+                   <option value="3.000 mAh">4.500 mAh</option>
+                   <option value="3.000 mAh">5.000 mAh</option>
+                   <option value="3.000 mAh">5.500 mAh</option>
+                   <option value="3.000 mAh">6.000 mAh</option>
+</select>   
+</div> 
+</section>
+
+    </div>
+ <% });	%>
+ <div> <label for="Color"></label> 
+            
+            <input type="text" name="color" placeholder="Color" class="burbuja" required >
+            
+            </div>
+        
+            </div>
+
+     <h2> Imágenes del Producto</h2>
+    <div class="contenedor5">
+     <div class="contenedor4"> 
+
+        
+      
+        <div class="contenedor3">
+            
+        <p class="botonImagen">Img-1</p>
+         <input type="file" name="imagecolor1" id="ImagenesProducto"  class="inputFile" required   >   
+        </div>
+      
+        <div class="contenedor3">
+            
+            <p class="botonImagen">Img-2</p>
+             <input type="file" name="imagecolor2" id="ImagenesProducto"  class="inputFile" required   >   
+            </div>
+            <div class="contenedor3">
+            
+                <p class="botonImagen">Img-3</p>
+                 <input type="file" name="imagecolor3" id="ImagenesProducto"  class="inputFile" required   >   
+                </div>
+        
+    </div>
+    </div>
+
+    
+    
+
+
+ 
+   
+
+                        </section>
+                        <section class="seccion-boton">
+                            <div >
+                                <button type="submit"   class="boton">Guardar</button>
+                        
+                            </div>  
+                            <div >
+                                <a href="./"> <i class="fas fa-reply"> </i>Volver al Inicio</a> 
+                             </div>
+                            </section>
+                             
+                            </form>
+                        
+                    
+                    
+    </main>
+
+    </body>
+   
+    </html>
