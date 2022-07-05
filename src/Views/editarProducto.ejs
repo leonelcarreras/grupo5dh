@@ -35,7 +35,7 @@
                     class="burbuja" placeholder="Marca" 
                     id="marca_id"><option disabled selected>Marca</option>
                     <% marcas.forEach(marca => { %>
-                        <option value="<%= marca.id %>"><%= marca.nombre_marca %></option>
+                        <option value="<%=marca.id %>"><%= marca.nombre_marca %></option>
                         <% }); %>
     </select>
                    

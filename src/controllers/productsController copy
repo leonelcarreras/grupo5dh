@@ -7,7 +7,7 @@ const { Op } = require("sequelize");
 const moment = require('moment');
 
 
-const Marcas = db.Marca;  
+const Marcas = db.Marca;
 const Modelos = db.Modelo;
 const Product_Variant = db.Product_Variant;
 
@@ -19,78 +19,78 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const productsController = {
-productss: (req, res) => {
-  db.Modelos.findAll({
-      include: ['marcas',"product_variant"]
-  })
+  productss: (req, res) => {
+    db.Modelos.findAll({
+      include: ['marcas', "product_variant"]
+    })
       .then(products => {
-          res.render('productss', {products})
-      })},
+        res.render('productss', { products })
+      })
+  },
 
-products:(req,res) => {res.render("products", { products })},
+  products: (req, res) => { res.render("products", { products }) },
 
-cart: (req,res) => {res.render("cart")},
+  cart: (req, res) => { res.render("cart") },
 
-productsByBrand:(req,res) =>
+  productsByBrand: (req, res) => {
 
-{  
-  
-  let productBrand = req.params.marca
+    let productBrand = req.params.marca
 
-   let productsByBrand = products.filter((p) => p.marca == productBrand );
+    let productsByBrand = products.filter((p) => p.marca == productBrand);
 
-  res.render("productsByBrand",{ productsByBrand })
+    res.render("productsByBrand", { productsByBrand })
 
-} ,
+  },
 
-altaProducto: (req,res) => {res.render("altaProducto")},
+  altaProducto: (req, res) => { res.render("altaProducto") },
 
-store: (req, res) => {
+  store: (req, res) => {
     let id = products[products.length - 1].id + 1;
 
-let images = req.files ; 
+    let images = req.files;
 
-console.log(images);
+    console.log(images);
 
-let imagecolor1 = images[0].filename;
-let imagecolor2 = images[1].filename;
-let imagecolor3 = images[2].filename ;  
+    let imagecolor1 = images[0].filename;
+    let imagecolor2 = images[1].filename;
+    let imagecolor3 = images[2].filename;
 
     let newProduct = {
-       id,
-       ...req.body,
-       imagecolor1,
-       imagecolor2,
-       imagecolor3,
-     };
-     console.log(newProduct);
-    
-     products.push(newProduct);
-     fs.writeFileSync(productsFilePath, JSON.stringify(products), "utf-8");
- 
-     res.redirect("/");
-},
+      id,
+      ...req.body,
+      imagecolor1,
+      imagecolor2,
+      imagecolor3,
+    };
+    console.log(newProduct);
+
+    products.push(newProduct);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products), "utf-8");
+
+    res.redirect("/");
+  },
 
 
 
-editarProducto: (req,res) => {
+  editarProducto: (req, res) => {
     let productId = Number(req.params.id)
-    let productToEdit = products.filter((p) => p.id == productId )
-    
-    res.render("editarProducto" ,{productToEdit})},
+    let productToEdit = products.filter((p) => p.id == productId)
+
+    res.render("editarProducto", { productToEdit })
+  },
 
 
   updateProduct: (req, res) => {
-        const productId = Number(req.params.id);
-        console.log(productId);
-        let productToEdit = products.find((p) => p.id === productId);
+    const productId = Number(req.params.id);
+    console.log(productId);
+    let productToEdit = products.find((p) => p.id === productId);
     console.log(productToEdit);
-    let images = req.files ; 
+    let images = req.files;
     console.log(req.files);
-console.log(images);
+    console.log(images);
     let imagecolor1 = images[0].filename;
     let imagecolor2 = images[1].filename;
-    let imagecolor3 = images[2].filename;  
+    let imagecolor3 = images[2].filename;
 
     productToEdit = {
       ...req.body,
@@ -101,45 +101,45 @@ console.log(images);
     };
 
     const updatedProducts = products.map((p) => {
-        if (p.id === productToEdit.id) {
-          return (p = { ...productToEdit });
-        }
-        return p;
-      });
-  
-      fs.writeFileSync(
-        productsFilePath,
-        JSON.stringify(updatedProducts),
-        "utf-8"
-      );
-  
-      res.redirect("/");
-    },
-  
+      if (p.id === productToEdit.id) {
+        return (p = { ...productToEdit });
+      }
+      return p;
+    });
+
+    fs.writeFileSync(
+      productsFilePath,
+      JSON.stringify(updatedProducts),
+      "utf-8"
+    );
+
+    res.redirect("/");
+  },
 
 
 
 
 
-// Detalle del Producto //
 
-productDetail: (req,res) => {
-    
+  // Detalle del Producto //
+
+  productDetail: (req, res) => {
+
     let id = req.params.id
-    let productDetail = products.filter((p) => p.id == id )
-    
-    res.render("productDetail", {productDetail})
-},
+    let productDetail = products.filter((p) => p.id == id)
 
-// Delete - borrar un producto//
+    res.render("productDetail", { productDetail })
+  },
 
-destroy: (req, res) => {
+  // Delete - borrar un producto//
+
+  destroy: (req, res) => {
     const productId = Number(req.params.id);
-    const finalProducts = products.filter ((p) =>p.id != productId);
-    
+    const finalProducts = products.filter((p) => p.id != productId);
+
     fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts), "utf-8");
     res.redirect("/");
-},
+  },
 
 };
 

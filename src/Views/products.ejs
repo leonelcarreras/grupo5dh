@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Head -->
-    <%- include("./partials/head") %>
+  <!-- Head -->
+  <%- include("./partials/head") %>
 
-<body>
+  <body>
     <!--Header-->
     <%- include("./partials/header") %>
 
     <div class="box-products">
-
-        <!-- <div class="filter-box">
+      <!-- <div class="filter-box">
             <h1 align="center">Filtro</h1>
             <br>
             <h2 align="center">Marca</h2>
@@ -22,34 +21,31 @@
             
         </div> -->
 
-        <div class="products-section">
-            <% products.forEach(product => {
-                 
-                %>
-                <figure class="snip1268">
-                    <div class="image">
-                    <img src="/images/products/<%= product.product_variants.imagecolor1 %>" alt="sq-sample4"/>
-                    <div class="icons">
-                        <a href="#"><i class="ion-star"></i></a>
-                        <a href="#"> <i class="ion-share"></i></a>
-                        <a href="/products/productDetail/<%= product.id %>#"> <i class="ion-search"></i></a>
-                    </div>
-                    <a href="#" class="add-to-cart">Agregar al carrito</a>
-                    </div>
-                    <figcaption>
-                    <h2> <%= product.marcas.nombre_marca%> <%= product.nombre %></h2>
-                    <p><%= product.marcas.nombre_marca%></p>
-                    <div class="price"><%= product.product_variants.price %>$ </div>
-                    </figcaption>
-                </figure>
-            <% });	%>
-            
-        </div>
-    </div>   
-
-
-</body>
-
-
-
+      <div class="products-section">
+        <% products.forEach(product => { %>
+        <figure class="snip1268">
+          <div class="image">
+            <img
+              src="/images/products/<%= product.product_variants.imagecolor1 %>"
+              alt="sq-sample4"
+            />
+            <div class="icons">
+              <a href="#"><i class="ion-star"></i></a>
+              <a href="#"> <i class="ion-share"></i></a>
+              <a href="/products/productDetail/<%= product.id %>#">
+                <i class="ion-search"></i
+              ></a>
+            </div>
+            <a href="#" class="add-to-cart">Agregar al carrito</a>
+          </div>
+          <figcaption>
+            <h2><%= product.marcas.nombre_marca%> <%= product.nombre %></h2>
+            <p><%= product.marcas.nombre_marca%></p>
+            <div class="price"><%= product.product_variants.price %>$</div>
+          </figcaption>
+        </figure>
+        <% }); %>
+      </div>
+    </div>
+  </body>
 </html>

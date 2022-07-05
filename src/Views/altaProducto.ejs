@@ -26,72 +26,86 @@
           <section class="formulario">
         
                
-                <div>  <label for="marca"></label> 
-            
-                    <select name="marca_id" 
-                    class="burbuja" placeholder="Marca" 
-                    id="marca_id"><option disabled selected>Marca</option>
-                    <% marcas.forEach(marca => { %>
-                        <option value="<%= marca.id %>"><%= marca.nombre_marca %></option>
-                        <% }); %>
-    </select>
-    
- </div>
+            <div>  <label for="marca"></label> 
+                <select name="marca_id" 
+                class="burbuja" placeholder="Marca"      
+                id="marca_id"><option selected value = "<%= locals.oldData ? oldData.marca_id : null %>"><%= locals.oldData ? oldData.marca_id  : null  %> Marca </option>
+                <% marcas.forEach(marca => { %>
+                    <option value="<%= marca.id %>"><%= marca.id %> - <%= marca.nombre_marca %></option>
+                    <% }); %>
+                    </select>
+       
+<% if (locals.errors && locals.errors.marca_id){  %> 
+    <h3 class="error"> <%=errors.marca_id.msg %>  <% }%> </h3>
+</div>
 
-    <div> <label for="Modelo"></label> 
+ <div> <label for="Modelo"></label> 
             
-        <input type="text" name="modelo" placeholder="Modelo" class="burbuja" required >
+    <input type="text" name="modelo" placeholder="Modelo" class="burbuja"  value="<%= locals.oldData ? oldData.modelo :null%>"  >
+    <% if (locals.errors && locals.errors.modelo){  %> 
+        <h3 class="error"> <%=errors.modelo.msg %>  <% }%> </h3>
+    </div>
+
+    <div> <label for="Procesador"></label> 
         
+        <input type="text" name="procesador" placeholder="Procesador" class="burbuja" value="<%= locals.oldData ? oldData.procesador :null%>"  >
+        <% if (locals.errors && locals.errors.procesador){  %> 
+            <h3 class="error"> <%=errors.procesador.msg %>  <% }%> </h3>
+        </div>
         </div>
 
-        <div> <label for="Procesador"></label> 
-            
-            <input type="text" name="procesador" placeholder="Procesador" class="burbuja" required >
-            
+        <div> <label for="camara"></label> 
+        
+            <input type="text" name="camaraResolucion" placeholder="Resolucion de Cámara" class="burbuja"  value="<%= locals.oldData ? oldData.camaraResolucion :null%>" >
+            <% if (locals.errors && locals.errors.camaraResolucion){  %> 
+                <h3 class="error"> <%=errors.camaraResolucion.msg %>  <% }%> </h3>
             </div>
-
-            <div> <label for="camara"></label> 
-            
-                <input type="text" name="camaraResolucion" placeholder="Resolucion de Cámara" class="burbuja" required >
-                
+            <div> <label for="video"></label> 
+        
+                <input type="text" name="videoResolucion" placeholder="Resolucion de Video" class="burbuja" value="<%= locals.oldData ? oldData.videoResolucion :null%>"  >
+                <% if (locals.errors && locals.errors.videoResolucion){  %> 
+                    <h3 class="error"> <%=errors.videoResolucion.msg %>  <% }%> </h3>
                 </div>
-                <div> <label for="video"></label> 
-            
-                    <input type="text" name="videoResolucion" placeholder="Resolucion de Video" class="burbuja" required >
-                    
+                <div> <label for="pantalla"></label> 
+        
+                    <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" value="<%= locals.oldData ? oldData.pantallaModelo :null%>" >
+                    <% if (locals.errors && locals.errors.pantallaModelo){  %> 
+                        <h3 class="error"> <%=errors.pantallaModelo.msg %>  <% }%> </h3>
                     </div>
-                    <div> <label for="pantalla"></label> 
-            
-                        <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" required >
+                    <div> <label for="pantallaResolucion"></label> 
                         
+                        <input type="text" name="pantallaResolucion" placeholder="Resolución de Pantalla" class="burbuja" value="<%= locals.oldData ? oldData.pantallaResolucion :null%>" >
+                        <% if (locals.errors && locals.errors.pantallaResolucion){  %> 
+                            <h3 class="error"> <%=errors.pantallaResolucion.msg %>  <% }%> </h3>
                         </div>
-                        <div> <label for="pantallaResolucion"></label> 
-            
-                            <input type="text" name="pantallaResolucion" placeholder="Resolución de Pantalla" class="burbuja" required >
-                            
-                            </div>
 <div class="contenedor1">
 <section class="contenedor2">   
-               <div    class="contenedor-color">       
-                   
-                                <select name="memoria" 
-                                class="burbuja" required
-                                id="">Memoria<option disabled selected>Memoria</option>
-                                <option value="8GB">8GB</option>
-                                   <option value="16GB">16GB</option>
-                                   <option value="32GB">32GB</option>
-                                   <option value="64GB">64GB</option>
-                </select>
-            </div> 
-        <div class="contenedor-bateria"> 
-                <select name="almacenamiento" 
-                class="burbuja" required
-                id="">Almacenamiento<option disabled selected>Almacenamiento</option>
-                <option value="64GB">64GB</option>
-                   <option value="128GB">128GB</option>
-                   <option value="256GB">256GB</option>
-                   <option value="512GB">512GB</option>
+           <div    class="contenedor-color">       
+               
+                            <select name="memoria" 
+                            class="burbuja" 
+                            id="">Memoria
+                            <option selected value = "<%= locals.oldData ? oldData.memoria : null %>"><%= locals.oldData ? oldData.memoria : null %> - Memoria</option>
+                            <option value="8GB">8GB</option>
+                               <option value="16GB">16GB</option>
+                               <option value="32GB">32GB</option>
+                               <option value="64GB">64GB</option>
+            </select>
+            <% if (locals.errors && locals.errors.memoria){  %> 
+                <h3 class="error"> <%=errors.memoria.msg %>  <% }%> </h3> 
+        </div> 
+    <div class="contenedor-bateria"> 
+            <select name="almacenamiento" 
+            class="burbuja" 
+            id="Almacenamiento">
+            <option selected value = "<%= locals.oldData ? oldData.almacenamiento : null %>"><%= locals.oldData ? oldData.almacenamiento : null %> - Almacenamiento</option>
+            <option value="64GB">64GB</option>
+               <option value="128GB">128GB</option>
+               <option value="256GB">256GB</option>
+               <option value="512GB">512GB</option>
 </select>   
+<% if (locals.errors && locals.errors.almacenamiento){  %> 
+<h3 class="error"> <%=errors.almacenamiento.msg %>  <% }%> </h3> 
 </div> 
 
 
@@ -103,87 +117,104 @@
 
 
 <div class="contenedor1">
-    <section class="contenedor2">   
-        <div  class="contenedor-color">       
-            
-                   <input type="number" name="price" id="price" placeholder="Precio" class="burbuja">
+<section class="contenedor2">   
+    <div  class="contenedor-color">       
+        
+               <input type="number" name="price" id="price" placeholder="Precio" class="burbuja" value="<%= locals.oldData ? oldData.modelo :null%>" >
 <section class="contenedor2">
-              </div>
+<% if (locals.errors && locals.errors.price){  %> 
+    <h3 class="error"> <%=errors.price.msg %>  <% }%> </h3> 
+          </div>
 
-        <div class="contenedor-bateria"> 
-                <select name="bateria" 
-                class="burbuja"
-                id="">Bateria<option disabled selected>Batería</option>
+    <div class="contenedor-bateria"> 
+        <label for="Batería"></label>
+            <select name="bateria" 
+            class="burbuja"
+            id="Batería">
+                <option selected value = "<%= locals.oldData ? oldData.bateria : null %>"><%= locals.oldData ? oldData.bateria : null %> - Bateria</option>
                 <option value="3.000 mAh">3.000 mAh</option>
-                   <option value="3.000 mAh">3.500 mAh</option>
-                   <option value="3.000 mAh">4.000 mAh</option>
-                   <option value="3.000 mAh">4.500 mAh</option>
-                   <option value="3.000 mAh">5.000 mAh</option>
-                   <option value="3.000 mAh">5.500 mAh</option>
-                   <option value="3.000 mAh">6.000 mAh</option>
-</select>   
+                <option value="3.000 mAh">3.500 mAh</option>
+                <option value="3.000 mAh">4.000 mAh</option>
+                <option value="3.000 mAh">4.500 mAh</option>
+                <option value="3.000 mAh">5.000 mAh</option>
+                <option value="3.000 mAh">5.500 mAh</option>
+                <option value="3.000 mAh">6.000 mAh</option>
+</select>  
+<% if (locals.errors && locals.errors.bateria){  %> 
+<h3 class="error"> <%=errors.bateria.msg %>  <% }%> </h3> 
 </div> 
 </section>
 
 <div> <label for="Color"></label> 
-            
-    <input type="text" name="color" placeholder="Color" class="burbuja" required >
-    
-    </div>
+        
+<input type="text" name="color" placeholder="Color" class="burbuja" value="<%= locals.oldData ? oldData.modelo :null%>" >
+<% if (locals.errors && locals.errors.color){  %> 
+    <h3 class="error"> <%=errors.color.msg %>  <% }%> </h3>
+</div>
+
+</div>
+
+ <h2> Imágenes del Producto</h2>
+<div class="contenedor5">
+ <div class="contenedor4"> 
+  
+    <div class="contenedor3">
+        
+    <p class="botonImagen">Img-1</p>
+     <input type="file" name="imagecolor1" id="ImagenesProducto"  class="inputFile" value="<%= locals.oldData ? oldData.imagecolor1 :null%>" >
 
     </div>
 
-     <h2> Imágenes del Producto</h2>
-    <div class="contenedor5">
-     <div class="contenedor4"> 
-      
-        <div class="contenedor3">
-            
-        <p class="botonImagen">Img-1</p>
-         <input type="file" name="imagecolor1" id="ImagenesProducto"  class="inputFile" required   >   
+
+    <div class="contenedor3">
+        
+        <p class="botonImagen">Img-2</p>
+         <input type="file" name="imagecolor2" id="ImagenesProducto"  class="inputFile">   
         </div>
-    
-    
         <div class="contenedor3">
-            
-            <p class="botonImagen">Img-2</p>
-             <input type="file" name="imagecolor2" id="ImagenesProducto"  class="inputFile" required   >   
+        
+            <p class="botonImagen">Img-3</p>
+             <input type="file" name="imagecolor3" id="ImagenesProducto"  class="inputFile" >   
             </div>
-            <div class="contenedor3">
+     
             
-                <p class="botonImagen">Img-3</p>
-                 <input type="file" name="imagecolor3" id="ImagenesProducto"  class="inputFile" required   >   
-                </div>
-         
-    </div>
-    </div>
-    <!-- <div class="ContenedorDescripcion"> <label for="Descripcion"></label> 
-            
-        <textarea name="descripcion" id="" cols="30" rows="20" class="burbuja2" required placeholder="Ingrese descripción del producto"></textarea>
-        </div> -->
-    
+</div>
+
+</div>
+
+<% if (locals.errors && locals.errors.imagecolor1){  %> 
+    <h3 class="error"> <%=errors.imagecolor1.msg %>  <% }%> </h3>   
+    <% if (locals.errors && locals.errors.imagecolor2){  %> 
+        <h3 class="error"> <%=errors.imagecolor2.msg %>  <% }%> </h3>   
+        <% if (locals.errors && locals.errors.imagecolor3){  %> 
+            <h3 class="error"> <%=errors.imagecolor3.msg %>  <% }%> </h3>   
+<!-- <div class="ContenedorDescripcion"> <label for="Descripcion"></label> 
+        
+    <textarea name="descripcion" id="" cols="30" rows="20" class="burbuja2" required placeholder="Ingrese descripción del producto"></textarea>
+    </div> -->
 
 
- 
-   
 
+
+
+
+                    </section>
+                    <section class="seccion-boton">
+                        <div >
+                            <button type="submit"   class="boton">Guardar</button>
+                    
+                        </div>  
+                        <div >
+                            <a href="./"> <i class="fas fa-reply"> </i>Volver al Inicio</a> 
+                         </div>
                         </section>
-                        <section class="seccion-boton">
-                            <div >
-                                <button type="submit"   class="boton">Guardar</button>
+                         
+                        </form>
                         
-                            </div>  
-                            <div >
-                                <a href="./"> <i class="fas fa-reply"> </i>Volver al Inicio</a> 
-                             </div>
-                            </section>
-                             
-                            </form>
-                            
-                        
-        </div>
-        </main>
+                    
+    </div>
+    </main>
 
-    </body>
+</body>
    
     </html>

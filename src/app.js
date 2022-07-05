@@ -22,7 +22,7 @@ app.use(userLoggedMiddleware);
 
 
 app.use(express.static(path.join(__dirname, '../Public')));
-
+app.use(express.static(path.join(__dirname + '../Public')));
 
 app.use(express.urlencoded({ extended: false }));
 

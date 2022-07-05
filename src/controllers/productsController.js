@@ -7,7 +7,7 @@ const { Op, where } = require("sequelize");
 const moment = require('moment');
 const { promisify } = require("util");
 
-
+const { validationResult } = require("express-validator");
 // const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
@@ -36,10 +36,11 @@ const productsController = {
 
   productsByBrand: (req, res) => {
 
-    console.log(req.params.marca);
+/*     console.log(req.params.marca); */
     db.Modelo.findAll({
       include: ['marcas', "product_variants"],
-      where: {  deletedTag: 0 ,
+      where: {
+        deletedTag: 0,
         '$marcas.nombre_marca$': req.params.marca
       }
 
@@ -55,7 +56,7 @@ const productsController = {
   altaProducto: (req, res) => {
     let marcas = Marcas.findAll().
       then((marcas) => {
-        console.log(marcas);
+        /* console.log(marcas); */
         return res.render('altaProducto', { marcas })
       })
 
@@ -67,36 +68,51 @@ const productsController = {
   create: (req, res) => {
 
 
-    let images = req.files;
+    const resultValidation = validationResult(req);
+ /*    console.log(resultValidation); */
 
-    let imagecolor1 = images[0].filename;
-    let imagecolor2 = images[1].filename;
-    let imagecolor3 = images[2].filename;
+    if (resultValidation.errors.length > 0) {
+      let marcas = Marcas.findAll().then((marcas) => {
+      /*   console.log(marcas); */
+          return res.render('altaProducto', {marcas ,
+             errors: resultValidation.mapped(),
+              oldData: req.body
+            });
+        })
+    }
+    else {
 
-    Modelos.create({
+      let images = req.files;
 
-      nombre: req.body.modelo,
-      marca_id: req.body.marca_id,
-      product_variants: {
-        camaraResolucion: req.body.camaraResolucion,
-        videoResolucion: req.body.videoResolucion,
-        memoria: req.body.memoria,
-        almacenamiento: req.body.almacenamiento,
-        procesador: req.body.procesador,
-        pantallaModelo: req.body.pantallaModelo,
-        pantallaResolucion: req.body.pantallaResolucion,
-        bateria: req.body.bateria,
-        imagecolor1: imagecolor1,
-        imagecolor2: imagecolor2,
-        imagecolor3: imagecolor3,
-        color: req.body.color,
-        price: req.body.price,
-      }
+      let imagecolor1 = images[0].filename;
+      let imagecolor2 = images[1].filename;
+      let imagecolor3 = images[2].filename;
 
-    }, { include: ["product_variants"] }).then(() => {
-      return res.redirect('/')
-    })
-      .catch(error => res.send(error))
+      Modelos.create({
+
+        nombre: req.body.modelo,
+        marca_id: req.body.marca_id,
+        product_variants: {
+          camaraResolucion: req.body.camaraResolucion,
+          videoResolucion: req.body.videoResolucion,
+          memoria: req.body.memoria,
+          almacenamiento: req.body.almacenamiento,
+          procesador: req.body.procesador,
+          pantallaModelo: req.body.pantallaModelo,
+          pantallaResolucion: req.body.pantallaResolucion,
+          bateria: req.body.bateria,
+          imagecolor1: imagecolor1,
+          imagecolor2: imagecolor2,
+          imagecolor3: imagecolor3,
+          color: req.body.color,
+          price: req.body.price,
+        }
+
+      }, { include: ["product_variants"] }).then(() => {
+        return res.redirect('/')
+      })
+        .catch(error => res.send(error))
+    }
   },
 
 
@@ -193,7 +209,7 @@ const productsController = {
       }
     ).then(() => {
       res.redirect('http://localhost:3004/products')
-      console.log(productToEdit);
+/*       console.log(productToEdit); */
     })
   },
 
@@ -202,11 +218,3 @@ const productsController = {
 
 
 module.exports = productsController
-
-
-
-      // let productBrand = req.params.marca
-
-      // let productsByBrand = products.filter((p) => p.marca == productBrand);
-
-      // res.render("productsByBrand", { productsByBrand })

@@ -6,13 +6,13 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-      
+
 
         camaraResolucion: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-   
+
         videoResolucion: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -43,15 +43,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         imagecolor1: {
-            type: dataTypes.STRING(60),
+            type: dataTypes.STRING(120),
             allowNull: false
         },
         imagecolor2: {
-            type: dataTypes.STRING(60),
+            type: dataTypes.STRING(120),
             allowNull: false
         },
         imagecolor3: {
-            type: dataTypes.STRING(60),
+            type: dataTypes.STRING(120),
             allowNull: false
         },
         color: {
@@ -66,13 +66,14 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: false,
     }
-    const Product_Variant = sequelize.define(alias, cols, config); 
+    const Product_Variant = sequelize.define(alias, cols, config);
 
     Product_Variant.associate = function (models) {
-        Product_Variant.hasOne(models.Modelo, { 
+        Product_Variant.hasOne(models.Modelo, {
             as: "modelos",
-             foreignKey: 'product_variant_id',
-        })}
+            foreignKey: 'product_variant_id',
+        })
+    }
 
     return Product_Variant
 };
