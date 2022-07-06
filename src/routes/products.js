@@ -45,12 +45,12 @@ router.get("/:marca", productController.productsByBrand);
 
 // Alta del Producto //
 
-router.get("products/altaProducto", productController.altaProducto);
+router.get("/altaProducto", productController.altaProducto);
 router.post("/", upload.any("imagecolor1", "imagecolor2", "imagecolor3"),productValidations, productController.create);
 
 // Edición del Producto //
 router.get("/editarProducto/:id", productController.editarProducto);
-router.patch("/editarProducto/:id", upload.any("imagecolor1", "imagecolor2", "imagecolor3"),productController.updateProduct);
+router.patch("/editarProducto/:id", upload.any("imagecolor1", "imagecolor2", "imagecolor3"),productValidations,productController.updateProduct);
 
 
 router.get("/cart", productController.cart);

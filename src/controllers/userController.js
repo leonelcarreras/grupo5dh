@@ -96,8 +96,24 @@ const userController = {
 
     loginProcess: (req, res) => {
 
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+
+            console.log(validationResult(req));
+
+            return res.render("login",
+                {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+
+                });
+        }
+
         let userToLogin = (db.User.findOne({ where: { email: req.body.email } })).then(userToLogin => {
             // console.log(userToLogin);
+
+
         
             console.log(userToLogin.dataValues.password)
             if (userToLogin) {

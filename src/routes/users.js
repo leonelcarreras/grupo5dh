@@ -8,6 +8,7 @@ const { body } = require("express-validator")
 const userController = require("../controllers/userController");
 
 const validations = require("../middlewares/registrovalidator")
+const logginvalidator = require("../middlewares/logginvalidator")
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const authMiddleware = require("../middlewares/authMiddleware")
 
@@ -36,7 +37,7 @@ const upload = multer ({storage});
 router.get("/registro", guestMiddleware, userController.registro);
 router.post("/registro",upload.single("userProfileImage"),validations,userController.altaUsuario);
 router.get("/login", guestMiddleware, userController.login);
-router.post("/login", userController.loginProcess);
+router.post("/login",logginvalidator,userController.loginProcess);
 router.get("/userProfile", authMiddleware, userController.profile);
 router.get("/logout", userController.logout);
 module.exports = router

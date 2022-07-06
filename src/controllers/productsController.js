@@ -134,9 +134,29 @@ const productsController = {
 
   updateProduct: (req, res) => {
 
+    const resultValidation = validationResult(req);
+ /*    console.log(resultValidation); */
+
+    if (resultValidation.errors.length > 0) {
+
+      let marcas = Marcas.findAll();
+      let product = db.Modelo.findAll(
+        {
+          where: { id: req.params.id },
+          include: ['marcas',"product_variants"]
+        })
+        Promise.all([marcas, product]).then(([marcas, product]) => {
+      /*   console.log(marcas); */
+          return res.render('editarProducto', {marcas ,product,
+             errors: resultValidation.mapped(),
+              oldData: req.body
+            });
+        })
+    }
+    else {
 
     let productToEdit = req.params.id;
-
+console.log(productToEdit);
     let images = req.files;
 
     let imagecolor1 = images[0].filename;
@@ -147,7 +167,7 @@ const productsController = {
 
       nombre: req.body.modelo,
       marca_id: req.body.marca_id,
-      product_variants: {
+      product_variants:{
         camaraResolucion: req.body.camaraResolucion,
         videoResolucion: req.body.videoResolucion,
         memoria: req.body.memoria,
@@ -164,13 +184,13 @@ const productsController = {
       }
 
     }, {
-      include: ["product_variants"], where: {
+      include:["product_variants"], where: {
         id: productToEdit
       }
     }).then(() => {
       return res.redirect('/')
     })
-      .catch(error => res.send(error))
+      .catch(error => res.send(error))}
   },
 
 
