@@ -111,11 +111,12 @@ const userController = {
         }
 
         let userToLogin = (db.User.findOne({ where: { email: req.body.email } })).then(userToLogin => {
-            // console.log(userToLogin);
+            console.log(req.body.email);
+            console.log(userToLogin);
 
 
         
-            console.log(userToLogin.dataValues.password)
+           /*  console.log(userToLogin.dataValues.password) */
             if (userToLogin) {
                 let contraseñaOk = bcryptjs.compareSync(req.body.password, userToLogin.dataValues.password)
                 console.log(bcryptjs.compareSync(req.body.password, userToLogin.dataValues.password));

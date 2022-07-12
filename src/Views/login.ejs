@@ -15,7 +15,7 @@
     <main class="formLogin">
 
 
-        <form action="/users/login" method="POST">
+        <form action="/users/login" id="form" method="POST">
   
         <section class="header-formulario">
     <div>
@@ -28,18 +28,20 @@
             <section class="formularioLogin">
                 
     <div>
-    <input type="text" name="email" placeholder="Ingrese su e-mail"  class="burbuja"  value="<%= locals.oldData ? oldData.email :null%>" >
+    <input type="text" name="email" id= "email" placeholder="Ingrese su e-mail"  class="burbuja"  value="<%= locals.oldData ? oldData.email :null%>" >
+   <h3 class="error" id="emailError"></h3>
     <% if (locals.errors && locals.errors.email){  %> 
-        <h3 class="error"> <%=errors.email.msg %> </h3>
+        <h3 id="emailError" class="error"> <%=errors.email.msg %> </h3>
         <% } %> 
     </div>
 
    
                 <div><label for="Contraseña"></label> 
     
-                    <input type="password" name="password" placeholder="Contraseña" class="burbuja">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" class="burbuja">
+                    <h3 class="error" id="passwordError"></h3>
                     <% if (locals.errors && locals.errors.password){  %> 
-                        <h3 class="error"> <%=errors.password.msg %> </h3>
+                        <h3  id="PasswordError" class="error"> <%=errors.password.msg %> </h3>
                         <% } %> 
                     <p class="rememberUser"><input type="checkbox" name="recordarUsuario" id="recordarUsuario" class="rememberUserTag"> <label for="recordarUsuario" >Recordar Ususario y Contraseña</label> </p>
                 </div>
@@ -48,7 +50,7 @@
             </section>
             <section class="seccion-boton">
                 <div  >
-                    <button type="submit" class="boton">Ingresar</button>
+                    <button  id="boton" type="button" class="boton">Ingresar</button>
             
                 </div>  
                 <div class="forgotPassword">
@@ -56,15 +58,16 @@
                  </div>
                 </section>
           
-                   
+                    
             
        
                 </section>
                       
                 </form>
+                 
                 </section>
-</div>
-</main>
 
+</main>
+<script src="../js/loginValidator.js"></script>  
 </body>
 </html>
