@@ -30,56 +30,62 @@
         
                
                 <div>  <label for="marca"></label> 
-            
                     <select name="marca_id" 
                     class="burbuja" placeholder="Marca" 
-                    id="marca_id"><option disabled selected>Marca</option>
+                    id="marca_id"><option selected value = "<%= locals.oldData ? oldData.marca_id : null %>"><%= locals.oldData ? oldData.marca_id  : null  %> Marca </option>
                     <% marcas.forEach(marca => { %>
-                        <option value="<%=marca.id %>"><%= marca.nombre_marca %></option>
+                        <option value="<%=marca.id %>"><%= marca.id %>-<%= marca.nombre_marca %></option>
                         <% }); %>
     </select>
-    <% if (locals.errors && locals.errors.marca_id){  %> 
+    <h3 class="error" id="marca_idError"></h3>
+<% if (locals.errors && locals.errors.marca_id){  %> 
     <h3 class="error"> <%=errors.marca_id.msg %>  <% }%> </h3>      
  </div>
 
     <div> <label for="Modelo"></label> 
             
-        <input type="text" name="modelo" placeholder="Modelo" class="burbuja" value="<%= locals.oldData ? oldData.modelo : product.nombre%>"  >
+        <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="burbuja" value="<%= locals.oldData ? oldData.modelo : product.nombre%>"  >
         <% if (locals.errors && locals.errors.modelo){  %> 
-        <h3 class="error"> <%=errors.modelo.msg %>  <% }%>
+        <h3 class="error"> <%=errors.modelo.msg %>  <% }%> </h3>
+            <h3 class="error" id="modeloError"></h3>
         </div>
 
         <div> <label for="Procesador"></label> 
             
-            <input type="text" name="procesador" placeholder="Procesador" class="burbuja" value="<%=  locals.oldData ? oldData.procesador : product.product_variants.procesador%>"  >
+            <input type="text" name="procesador" placeholder="Procesador" id = "procesador" class="burbuja" value="<%=  locals.oldData ? oldData.procesador : product.product_variants.procesador%>"  >
             <% if (locals.errors && locals.errors.procesador){  %> 
             <h3 class="error"> <%=errors.procesador.msg %>  <% }%> </h3>
+            <h3 class="error" id="procesadorError"></h3>
             </div>
 
             <div> <label for="camara"></label> 
             
-                <input type="text" name="camaraResolucion" placeholder="" class="burbuja" value="<%= locals.oldData ? oldData.camaraResolucion : product.product_variants.camaraResolucion%>"  >
+                <input type="text" name="camaraResolucion" id = "camaraResolucion" placeholder="" class="burbuja" value="<%= locals.oldData ? oldData.camaraResolucion : product.product_variants.camaraResolucion%>"  >
                 <% if (locals.errors && locals.errors.camaraResolucion){  %> 
                 <h3 class="error"> <%=errors.camaraResolucion.msg %>  <% }%> </h3>
+                <h3 class="error" id="camaraResolucionError"></h3>
                 </div>
                 <div> <label for="video"></label> 
             
-            <input type="text" name="videoResolucion" placeholder="Resolucion de Video" class="burbuja" value="<%= locals.oldData ? oldData.videoResolucion : product.product_variants.videoResolucion%>"  >
+            <input type="text" name="videoResolucion" id = "videoResolucion" placeholder="Resolucion de Video" class="burbuja" value="<%= locals.oldData ? oldData.videoResolucion : product.product_variants.videoResolucion%>"  >
             <% if (locals.errors && locals.errors.videoResolucion){  %> 
-                    <h3 class="error"> <%=errors.videoResolucion.msg %>  <% }%> </h3>       
+                    <h3 class="error"> <%=errors.videoResolucion.msg %>  <% }%> </h3>
+                    <h3 class="error" id="videoResolucionError"></h3>       
             </div>
             <div> <label for="pantalla"></label> 
             
-                    <input type="text" name="pantallaModelo" placeholder="Pantalla" class="burbuja" value="<%= locals.oldData ? oldData.pantallaModelo : product.product_variants.pantallaModelo%>"  >
+                    <input type="text" name="pantallaModelo" id = "pantallaModelo" placeholder="Pantalla" class="burbuja" value="<%= locals.oldData ? oldData.pantallaModelo : product.product_variants.pantallaModelo%>"  >
                     <% if (locals.errors && locals.errors.pantallaModelo){  %> 
                         <h3 class="error"> <%=errors.pantallaModelo.msg %>  <% }%> </h3> 
+                        <h3 class="error" id="pantallaModeloError"></h3>
                         </div>
                         <div> <label for="pantallaResolucion"></label> 
+                            
             
-                            <input type="text" name="pantallaResolucion" placeholder="Resolución de Pantalla" class="burbuja" value="<%= locals.oldData ? oldData.pantallaResolucion : product.product_variants.pantallaResolucion%>"  >
+                            <input type="text" name="pantallaResolucion" id="pantallaResolucion" placeholder="Resolución de Pantalla" class="burbuja" value="<%= locals.oldData ? oldData.pantallaResolucion : product.product_variants.pantallaResolucion%>"  >
                             <% if (locals.errors && locals.errors.pantallaResolucion){  %> 
                             <h3 class="error"> <%=errors.pantallaResolucion.msg %>  <% }%> </h3>
-                            
+                            <h3 class="error" id="pantallaResolucionError"></h3>
                             </div>
 <div class="contenedor1">
 <section class="contenedor2">   
@@ -87,7 +93,7 @@
                    
                                 <select name="memoria" 
                                 class="burbuja" 
-                                id="">Memoria<option selected value ="<%= locals.oldData ? oldData.memoria : product.product_variants.memoria%>"><%= locals.oldData ? oldData.memoria : product.product_variants.memoria%></option>
+                                id="memoria">Memoria<option selected value ="<%= locals.oldData ? oldData.memoria : product.product_variants.memoria%>"><%= locals.oldData ? oldData.memoria : product.product_variants.memoria%></option>
                                 <option value="8GB">8GB</option>
                                    <option value="16GB">16GB</option>
                                    <option value="32GB">32GB</option>
@@ -95,18 +101,20 @@
                 </select>
                 <% if (locals.errors && locals.errors.memoria){  %> 
                 <h3 class="error"> <%=errors.memoria.msg %>  <% }%> </h3> 
+                <h3 class="error" id="memoriaError"></h3>
             </div> 
         <div class="contenedor-bateria"> 
                 <select name="almacenamiento" 
                 class="burbuja" 
-                id="">Almacenamiento<option selected value="<%= locals.oldData ? oldData.almacenamiento : product.product_variants.almacenamiento%>"><%= locals.oldData ? oldData.almacenamiento : product.product_variants.almacenamiento%> - Almacenamiento</option>
+                id="almacenamiento">Almacenamiento<option selected value="<%= locals.oldData ? oldData.almacenamiento : product.product_variants.almacenamiento%>"><%= locals.oldData ? oldData.almacenamiento : product.product_variants.almacenamiento%> - Almacenamiento</option>
                 <option value="64GB">64GB</option>
                    <option value="128GB">128GB</option>
                    <option value="256GB">256GB</option>
                    <option value="512GB">512GB</option>
 </select>
 <% if (locals.errors && locals.errors.almacenamiento){  %> 
-<h3 class="error"> <%=errors.almacenamiento.msg %>  <% }%> </h3>    
+<h3 class="error"> <%=errors.almacenamiento.msg %>  <% }%> </h3>
+<h3 class="error" id="almacenamientoError"></h3>  
 </div> 
 
 
@@ -124,13 +132,14 @@
                    <input type="number" name="price" id="price" value="<%= product.product_variants.price%>" class="burbuja">
 <section class="contenedor2">
     <% if (locals.errors && locals.errors.price){  %> 
-    <h3 class="error"> <%=errors.price.msg %>  <% }%> </h3> 
+    <h3 class="error"> <%=errors.price.msg %>  <% }%> </h3>
+    <h3 class="error" id="priceError"></h3>
               </div>
 
         <div class="contenedor-bateria"> 
                 <select name="bateria" 
                 class="burbuja"
-                id="">Bateria<option selected value="<%= locals.oldData ? oldData.bateria : product.product_variants.bateria%>"><%= locals.oldData ? oldData.bateria : product.product_variants.bateria%> </option>
+                id="bateria">Bateria<option selected value="<%= locals.oldData ? oldData.bateria : product.product_variants.bateria%>"><%= locals.oldData ? oldData.bateria : product.product_variants.bateria%> </option>
                 <option value="3.000 mAh">3.000 mAh</option>
                    <option value="3.000 mAh">3.500 mAh</option>
                    <option value="3.000 mAh">4.000 mAh</option>
@@ -140,7 +149,8 @@
                    <option value="3.000 mAh">6.000 mAh</option>
 </select> 
 <% if (locals.errors && locals.errors.bateria){  %> 
-<h3 class="error"> <%=errors.bateria.msg %>  <% }%> </h3>   
+<h3 class="error"> <%=errors.bateria.msg %>  <% }%> </h3>
+<h3 class="error" id="bateriaError"></h3>
 </div> 
 </section>
 
@@ -148,9 +158,10 @@
 
  <div> <label for="Color"></label> 
             
-            <input type="text" name="color" placeholder="Color" class="burbuja"  >
+            <input type="text" id="color" name="color" placeholder="Color" class="burbuja"  >
             <% if (locals.errors && locals.errors.color){  %> 
     <h3 class="error"> <%=errors.color.msg %>  <% }%> </h3>
+    <h3 class="error" id="colorError"></h3>
             </div>
         
             </div>
@@ -164,18 +175,18 @@
         <div class="contenedor3">
             
         <p class="botonImagen">Img-1</p>
-         <input type="file" name="imagecolor1" id="ImagenesProducto"  class="inputFile"  >   
+         <input type="file" name="imagecolor1" id="ImagenesProducto1"  class="inputFile"  >   
         </div>
       
         <div class="contenedor3">
             
             <p class="botonImagen">Img-2</p>
-             <input type="file" name="imagecolor2" id="ImagenesProducto"  class="inputFile"    >   
+             <input type="file" name="imagecolor2" id="ImagenesProducto2"  class="inputFile"    >   
             </div>
             <div class="contenedor3">
             
                 <p class="botonImagen">Img-3</p>
-                 <input type="file" name="imagecolor3" id="ImagenesProducto"  class="inputFile"    >   
+                 <input type="file" name="imagecolor3" id="ImagenesProducto3"  class="inputFile"    >   
                 </div>
         
     </div>
@@ -183,11 +194,14 @@
 
      <% }) %>
     <% if (locals.errors && locals.errors.imagecolor1){  %> 
-    <h3 class="error"> <%=errors.imagecolor1.msg %>  <% }%> </h3>   
+    <h3 class="error"> <%=errors.imagecolor1.msg %>  <% }%> </h3>
+    <h3 class="error" id="ImagenesProducto1Error"></h3> 
     <% if (locals.errors && locals.errors.imagecolor2){  %> 
-        <h3 class="error"> <%=errors.imagecolor2.msg %>  <% }%> </h3>   
+        <h3 class="error"> <%=errors.imagecolor2.msg %>  <% }%> </h3>
+        <h3 class="error" id="ImagenesProducto2Error"></h3>   
         <% if (locals.errors && locals.errors.imagecolor3){  %> 
-            <h3 class="error"> <%=errors.imagecolor3.msg %>  <% }%> </h3>   
+            <h3 class="error"> <%=errors.imagecolor3.msg %>  <% }%> </h3>
+            <h3 class="error" id="ImagenesProducto3Error"></h3> 
 
 
  
@@ -196,7 +210,7 @@
                         </section>
                         <section class="seccion-boton">
                             <div >
-                                <button type="submit"   class="boton">Guardar</button>
+                                <button type="button"  id="boton" class="boton">Guardar</button>
                         
                             </div>  
                             <div >
@@ -209,7 +223,7 @@
                     
                     
     </main>
-
+<script src="/js/editarProductoValidator.js"></script>  
     </body>
-   
+    
     </html>
