@@ -60,10 +60,22 @@
   
     } 
   
+ 
+     
+ .errores {
+       color: #f0e4e5;
+       background-color: #f04949 ;
+       border-radius: 5px;
+       text-align: center;
+       font-size: 20px;
+      }
+      
+
+
       
 .error {font-size: 45;
   font-weight: bold;
-color: crimson;};
+   color: crimson;};
 
 
     .burbuja{
