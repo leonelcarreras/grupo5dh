@@ -32,7 +32,7 @@ window.onload =function () {
     
 
             if (email.value == "") {
-                errors.push ("agregar email completo");
+                errors.push ("Agregar email completo");
                 email.classList.add("is-invalid");
             } else {
                 email.classList.add("is-invalid");
