@@ -8,6 +8,7 @@ const moment = require('moment');
 const { promisify } = require("util");
 
 const { validationResult } = require("express-validator");
+const { log } = require("console");
 // const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
@@ -15,7 +16,7 @@ const { validationResult } = require("express-validator");
 
 const Marcas = db.Marca;
 const Modelos = db.Modelo;
-const Product_Variant = db.Product_Variant;
+const Product_Variant = db.Product_variant;
 
 
 const productsController = {
@@ -163,7 +164,7 @@ const productsController = {
 
       let productToEdit = Number(req.params.id);
       console.log("Eitar Producto ----------------");
-      console.log(productToEdit);
+      /*  console.log(productToEdit); */
       let images = req.files;
 
       let imagecolor1 = images[0].filename;
@@ -177,39 +178,72 @@ const productsController = {
       const update = await Modelos.update({
 
         nombre: req.body.modelo,
-        marca_id: req.body.marca_id,
-        product_variants: {
-          camaraResolucion: req.body.camaraResolucion,
-          videoResolucion: req.body.videoResolucion,
-          memoria: req.body.memoria,
-          almacenamiento: req.body.almacenamiento,
-          procesador: req.body.procesador,
-          pantallaModelo: req.body.pantallaModelo,
-          pantallaResolucion: req.body.pantallaResolucion,
-          bateria: req.body.bateria,
-          imagecolor1: imagecolor1,
-          imagecolor2: imagecolor2,
-          imagecolor3: imagecolor3,
-          color: req.body.color,
-          price: req.body.price,
-        }
+        marca_id: req.body.marca_id
+        /*      product_variants: {
+               camaraResolucion: req.body.camaraResolucion,
+               videoResolucion: req.body.videoResolucion,
+               memoria: req.body.memoria,
+               almacenamiento: req.body.almacenamiento,
+               procesador: req.body.procesador,
+               pantallaModelo: req.body.pantallaModelo,
+               pantallaResolucion: req.body.pantallaResolucion,
+               bateria: req.body.bateria,
+               imagecolor1: imagecolor1,
+               imagecolor2: imagecolor2,
+               imagecolor3: imagecolor3,
+               color: req.body.color,
+               price: req.body.price,
+             } */
 
 
 
       },
-       {
-        where: {
-          id: productToEdit
-        }},{  include: [Modelos.product_variants]
-      })
-     .then(() => {
+        {
+          where: {
+            id: productToEdit
+          }
+        }/* ,{  include: [Modelos.product_variants]
+      } */).then(() => {
+          let product = db.Modelo.findByPk(req.params.id,
+          ).then((product) => {
 
-        return res.redirect('/')
-      })
+            productVariantId = product.product_variant_id;
+
+            console.log("Tabla Relacionada");
+            console.log(product);
+            console.log(productVariantId);
+
+            Product_Variant.update({
+
+              camaraResolucion: req.body.camaraResolucion,
+              videoResolucion: req.body.videoResolucion,
+              memoria: req.body.memoria,
+              almacenamiento: req.body.almacenamiento,
+              procesador: req.body.procesador,
+              pantallaModelo: req.body.pantallaModelo,
+              pantallaResolucion: req.body.pantallaResolucion,
+              bateria: req.body.bateria,
+              imagecolor1: imagecolor1,
+              imagecolor2: imagecolor2,
+              imagecolor3: imagecolor3,
+              color: req.body.color,
+              price: req.body.price,
+
+            },
+              {
+                where: {
+                  id: productVariantId
+                }
+              })
+          })
+        })
+        .then(() => {
+
+          return res.redirect('/')
+        })
         .catch(error => res.send(error))
     }
   },
-
 
 
 

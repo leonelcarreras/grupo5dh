@@ -24,8 +24,8 @@ app.use(cookies());
 app.use(userLoggedMiddleware);
 
 
-app.use(express.static(path.join(__dirname, '../Public')));
-app.use(express.static(path.join(__dirname + '../Public')));
+app.use(express.static(path.join(__dirname, '../public')));
+/* app.use(express.static(path.join(__dirname + '../Public'))); */
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -51,7 +51,11 @@ app.use("/", rutas);
 app.use("/products", rutasProudcto)
 app.use("/users", rutasUsers)
 
+/* RUTAS DE APIS */
 
+const rutasApiProdcto = require("./routes/api/products")
+
+app.use('/api/products',rutasApiProdcto);
 
 
 // app.use((req, res, next) =>

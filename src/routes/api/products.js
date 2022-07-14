@@ -2,12 +2,12 @@ const express = require("express");
 const router = express.Router();
 const path = require("path")
 
-const productController = require("../controllers/productsController");
+const productController = require("../../controllers/api/productsController");
 
-const productValidations = require("../middlewares/productValidator");
+/* const productValidations = require("../middlewares/productValidator"); */
 
 // const { path } = require('../app');
-const multer = require("multer");
+/* const multer = require("multer");
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
 
@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
 
 
 
-const upload = multer({ storage });
+const upload = multer({ storage }); */
 
 
 // router.get("/", productController.home);
@@ -43,21 +43,26 @@ router.get("/productDetail/:id", productController.productDetail);
 
 router.get("/:marca", productController.productsByBrand);
 
+
+// Listado de Marcas //
+
+router.get("/marcas/listado", productController.marcas);
+
 // Alta del Producto //
 
-router.get("/altaProducto",productValidations, productController.altaProducto);
+/* router.get("/altaProducto",productValidations, productController.altaProducto);
 router.post("/", upload.any("imagecolor1", "imagecolor2", "imagecolor3"),productValidations, productController.create);
-
+ */
 // Edición del Producto //
-router.get("/editarProducto/:id", productController.editarProducto);
+/* router.get("/editarProducto/:id", productController.editarProducto);
 router.patch("/editarProducto/:id", upload.any("imagecolor1", "imagecolor2", "imagecolor3"),productValidations,productController.updateProduct);
 
 
 router.get("/cart", productController.cart);
+ */
 
+/* // Delete Producto //
 
-// Delete Producto //
-
-router.post("/:id", productController.destroy);
+router.post("/:id", productController.destroy); */
 
 module.exports = router;    
