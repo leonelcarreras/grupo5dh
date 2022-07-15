@@ -59,11 +59,20 @@
     margin: 35px;
   
     } 
-  
-      
+
+ .errores {
+       color: #f0e4e5;
+       background-color: #f04949 ;
+       border-radius: 10px;
+       text-align: center;
+       font-size: 20px;
+       margin-right: 20px;
+      }
+
+
 .error {font-size: 45;
   font-weight: bold;
-color: crimson;};
+   color: crimson;};
 
 
     .burbuja{
@@ -113,9 +122,9 @@ max-width: 800px;
   height: 60px;
   border-radius: 5px;
   font-size: 20px;
-  border: solid 0.5px white
-  ; background-color: white;
-max-width: 850px;}
+  border: solid 0.5px white;
+  background-color: white;
+  max-width: 850px;}
   
 h3 {font-size: 15px;}
   .formulario div {
