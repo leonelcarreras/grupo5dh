@@ -4,6 +4,7 @@ const path = require("path")
 
 const userApiController = require("../../controllers/api/userApiController");
 
-router.get("/", userApiController.User);
+router.get("/", userApiController.list);
+router.get("/detail/:id", userApiController.userDetail);
 
 module.exports = router;  

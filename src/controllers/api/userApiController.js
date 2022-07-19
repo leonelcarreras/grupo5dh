@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require('fs');
 
-const DB = require('../../database/models');
-const sequelize = DB.sequelize;
+const db = require('../../database/models');
+const sequelize = db.sequelize;
 const { Op, where } = require("sequelize");
 
 
@@ -10,20 +10,32 @@ const { validationResult } = require("express-validator");
 const { log } = require("console");
 
 
-const User = DB.User;
+const Users = db.User;
 
 
 
 module.exports = {
   list: (req,res) => {
-    DB.User
+    Users
     .findAll()
-    .then(user => {
+    .then(users => {
       return res.status(200).json({
-        total: User.length,
-        data: User,
-        status:200
+        total: users.length,
+        data: users,
+        status:200,
+        url: "api/users/"
       })
     })
   }
+,
+  userDetail:(req,res) => {
+    Users
+    .findByPk(req.params.id)
+    .then(user => {
+      return res.status(200).json({
+        data: user,
+        status:200,
+        url: "api/users/detail/:id"
+      })
+    })}
 }

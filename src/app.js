@@ -53,9 +53,12 @@ app.use("/users", rutasUsers)
 
 /* RUTAS DE APIS */
 
-const rutasApiProdcto = require("./routes/api/products")
+const rutasApiProdcto = require("./routes/api/products");
+const rutasApiUsers = require("./routes/api/users")
 
 app.use('/api/products',rutasApiProdcto);
+app.use('/api/users',rutasApiUsers);
+
 
 
 // app.use((req, res, next) =>

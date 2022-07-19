@@ -32,7 +32,7 @@
                 <div>  <label for="marca"></label> 
                     <select name="marca_id" 
                     class="burbuja" placeholder="Marca" 
-                    id="marca_id"><option selected value = "<%= locals.oldData ? oldData.marca_id : null %>"><%= locals.oldData ? oldData.marca_id  : null  %> Marca </option>
+                    id="marca_id"><option selected value ="<%= locals.oldData ? oldData.marca_id : product.marcas.id %>"><%= locals.oldData ? oldData.marca_id  : null  %> Marca </option>
                     <% marcas.forEach(marca => { %>
                         <option value="<%=marca.id %>"><%= marca.id %>-<%= marca.nombre_marca %></option>
                         <% }); %>
@@ -44,7 +44,7 @@
 
     <div> <label for="Modelo"></label> 
             
-        <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="burbuja" value="<%= locals.oldData ? oldData.modelo : product.nombre%>"  >
+        <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="burbuja" value="<%= locals.oldData ? oldData.modelo : product.nombre%>" >
         <% if (locals.errors && locals.errors.modelo){  %> 
         <h3 class="error"> <%=errors.modelo.msg %>  <% }%> </h3>
             <h3 class="error" id="modeloError"></h3>
@@ -194,7 +194,7 @@
 
      <% }) %>
     <% if (locals.errors && locals.errors.imagecolor1){  %> 
-    <h3 class="error"> <%=errors.imagecolor1.msg %>  <% }%> </h3>
+    <h4 class="error"> <%=errors.imagecolor1.msg %>  <% }%> </h3>
     <h3 class="error" id="ImagenesProducto1Error"></h3> 
     <% if (locals.errors && locals.errors.imagecolor2){  %> 
         <h3 class="error"> <%=errors.imagecolor2.msg %>  <% }%> </h3>
